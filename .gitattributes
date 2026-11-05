@@ -1,0 +1,7 @@
+# Preserve byte-identical evidence snapshots and recorded SHA-256.
+data/reference/sources/** -text whitespace=cr-at-eol
+data/reference/sources/*.xml -diff
+data/reference/sources/*.html -diff
+data/reference/sources/*.md text eol=lf
+docs/evidence/** -text whitespace=cr-at-eol
+uv.lock text eol=lf

@@ -1,0 +1,9 @@
+subject,model_id,outcome,nobs,adjusted_r2,adjusted_r2_printed,adjusted_r2_tolerance,source_url,source_column,source_xml_id,source_snapshot,verified
+mat,M1,G3,390,0.046,0.046,0.0005000001,https://www.nature.com/articles/s41598-025-89394-2/tables/8,1,Tab8,sources/da2025_fulltext.xml,true
+mat,M2,G3,390,0.062,0.062,0.0005000001,https://www.nature.com/articles/s41598-025-89394-2/tables/8,2,Tab8,sources/da2025_fulltext.xml,true
+mat,M3,G3,390,0.061,0.061,0.0005000001,https://www.nature.com/articles/s41598-025-89394-2/tables/8,3,Tab8,sources/da2025_fulltext.xml,true
+mat,M4,G3,390,0.057,0.057,0.0005000001,https://www.nature.com/articles/s41598-025-89394-2/tables/8,4,Tab8,sources/da2025_fulltext.xml,true
+por,M7,G3,637,0.063,0.063,0.0005000001,https://www.nature.com/articles/s41598-025-89394-2/tables/8,7,Tab8,sources/da2025_fulltext.xml,true
+por,M8,G3,637,0.094,0.094,0.0005000001,https://www.nature.com/articles/s41598-025-89394-2/tables/8,8,Tab8,sources/da2025_fulltext.xml,true
+por,M9,G3,637,0.148,0.148,0.0005000001,https://www.nature.com/articles/s41598-025-89394-2/tables/8,9,Tab8,sources/da2025_fulltext.xml,true
+por,M10,G3,637,0.152,0.152,0.0005000001,https://www.nature.com/articles/s41598-025-89394-2/tables/8,10,Tab8,sources/da2025_fulltext.xml,true

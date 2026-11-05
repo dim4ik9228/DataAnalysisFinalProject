@@ -1,6 +1,12 @@
 [project]
 seed = 20261105
-status = "scaffold"
+status = "protocol_ready"
+
+[protocol]
+version = "1.0"
+date = "2026-11-05"
+stage = "fixed_before_student_data_analysis"
+external_preregistration = false
 
 [replication]
 doi = "10.1038/s41598-025-89394-2"
@@ -11,9 +17,113 @@ education_reference = 1
 education_levels = [1, 2, 3, 4]
 exclude_parent_education_zero = true
 exclude_zero_grades = false
-# До аналітичного запуску перевірити вид стандартних похибок оригіналу.
 standard_errors = "unresolved"
+intercept = true
+train_test_split = false
+missing_policy = "error_no_silent_dropping"
+
+[reference_categories]
+sex = "M"
+school = "MS"
+guardian = "other"
 
 [expected_sample]
 mat = 390
 por = 637
+
+[inference]
+covariance = "HC3"
+use_t = false
+confidence_level = 0.95
+alpha = 0.05
+test_sidedness = "two-sided"
+wald_distribution = "chi2"
+multiple_testing = "holm"
+primary_family = ["M4:Medu_4=0", "M10:Medu_4=0"]
+secondary_family = ["M4:Medu_4-Fedu_4=0", "M10:Medu_4-Fedu_4=0"]
+covariance_sensitivity = ["nonrobust", "HC1"]
+sensitivity_use_t = false
+
+[comparison]
+nobs_rule = "exact"
+rounding_rule = "half_last_printed_unit_plus_epsilon"
+rounding_epsilon = "0.0000000001"
+require_all_published_coefficients = true
+unknown_original_se_verdict = "not_identified_no_exact_inference_claim"
+
+[[models]]
+id = "M1"
+subject = "mat"
+source_column = 1
+controls = []
+
+[[models]]
+id = "M2"
+subject = "mat"
+source_column = 2
+controls = ["age", "sex"]
+
+[[models]]
+id = "M3"
+subject = "mat"
+source_column = 3
+controls = ["age", "sex", "school"]
+
+[[models]]
+id = "M4"
+subject = "mat"
+source_column = 4
+controls = ["age", "sex", "school", "guardian"]
+
+[[models]]
+id = "M7"
+subject = "por"
+source_column = 7
+controls = []
+
+[[models]]
+id = "M8"
+subject = "por"
+source_column = 8
+controls = ["age", "sex"]
+
+[[models]]
+id = "M9"
+subject = "por"
+source_column = 9
+controls = ["age", "sex", "school"]
+
+[[models]]
+id = "M10"
+subject = "por"
+source_column = 10
+controls = ["age", "sex", "school", "guardian"]
+
+[robustness]
+base_models = ["M4", "M10"]
+variants = ["include_education_zero", "exclude_G3_zero", "ordinal_education", "separate_schools", "add_studytime"]
+min_subgroup_n = 50
+min_compared_category_n = 5
+rank_deficiency = "not_estimable_no_automatic_model_search"
+missing_category = "report_unavailable_contrast"
+max_leverage = 0.999999
+studytime_encoding = "categorical_reference_1"
+extra_analysis = "exploratory_if_not_predefined"
+
+[diagnostics]
+checks = ["residuals_vs_fitted", "qq_plot", "vif", "cooks_distance", "leverage", "rank"]
+vif_flag = 5.0
+cooks_distance_rule = "4/n"
+leverage_rule = "2p/n"
+automatic_row_deletion = false
+
+[placebo]
+kind = "independent_normal_noise"
+distribution = "N(0,1)"
+repetitions = 1
+seed_offsets = [101, 102]
+subject_order = ["mat", "por"]
+base_models = ["M4", "M10"]
+coefficient_test = "noise=0"
+rerun_until_nonsignificant = false
+permutation_p_value = false

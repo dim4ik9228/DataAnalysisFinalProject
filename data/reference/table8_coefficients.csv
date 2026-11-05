@@ -1,0 +1,69 @@
+subject,model_id,term,estimate,std_error,estimate_printed,se_printed,estimate_source_text,se_source_text,estimate_decimals,se_decimals,estimate_tolerance,se_tolerance,significance_marker,source_url,source_column,source_xml_id,source_snapshot,verified
+mat,M1,Medu_2,1.07,0.78,1.07,0.78,1.07,(0.78),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,1,Tab8,sources/da2025_fulltext.xml,true
+mat,M2,Medu_2,0.99,0.78,0.99,0.78,0.99,(0.78),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,2,Tab8,sources/da2025_fulltext.xml,true
+mat,M3,Medu_2,1.11,0.78,1.11,0.78,1.11,(0.78),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,3,Tab8,sources/da2025_fulltext.xml,true
+mat,M4,Medu_2,1.12,0.78,1.12,0.78,1.12,(0.78),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,4,Tab8,sources/da2025_fulltext.xml,true
+por,M7,Medu_2,0.71,0.36,0.71,0.36,0.71**,(0.36),2,2,0.0050000001,0.0050000001,**,https://www.nature.com/articles/s41598-025-89394-2/tables/8,7,Tab8,sources/da2025_fulltext.xml,true
+por,M8,Medu_2,0.70,0.35,0.70,0.35,0.70**,(0.35),2,2,0.0050000001,0.0050000001,**,https://www.nature.com/articles/s41598-025-89394-2/tables/8,8,Tab8,sources/da2025_fulltext.xml,true
+por,M9,Medu_2,0.29,0.35,0.29,0.35,0.29,(0.35),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,9,Tab8,sources/da2025_fulltext.xml,true
+por,M10,Medu_2,0.30,0.35,0.30,0.35,0.30,(0.35),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,10,Tab8,sources/da2025_fulltext.xml,true
+mat,M1,Medu_3,1.64,0.81,1.64,0.81,1.64**,(0.81),2,2,0.0050000001,0.0050000001,**,https://www.nature.com/articles/s41598-025-89394-2/tables/8,1,Tab8,sources/da2025_fulltext.xml,true
+mat,M2,Medu_3,1.57,0.81,1.57,0.81,1.57*,(0.81),2,2,0.0050000001,0.0050000001,*,https://www.nature.com/articles/s41598-025-89394-2/tables/8,2,Tab8,sources/da2025_fulltext.xml,true
+mat,M3,Medu_3,1.68,0.80,1.68,0.80,1.68**,(0.80),2,2,0.0050000001,0.0050000001,**,https://www.nature.com/articles/s41598-025-89394-2/tables/8,3,Tab8,sources/da2025_fulltext.xml,true
+mat,M4,Medu_3,1.70,0.82,1.70,0.82,1.70**,(0.82),2,2,0.0050000001,0.0050000001,**,https://www.nature.com/articles/s41598-025-89394-2/tables/8,4,Tab8,sources/da2025_fulltext.xml,true
+por,M7,Medu_3,0.79,0.42,0.79,0.42,0.79*,(0.42),2,2,0.0050000001,0.0050000001,*,https://www.nature.com/articles/s41598-025-89394-2/tables/8,7,Tab8,sources/da2025_fulltext.xml,true
+por,M8,Medu_3,0.88,0.41,0.88,0.41,0.88**,(0.41),2,2,0.0050000001,0.0050000001,**,https://www.nature.com/articles/s41598-025-89394-2/tables/8,8,Tab8,sources/da2025_fulltext.xml,true
+por,M9,Medu_3,0.42,0.40,0.42,0.40,0.42,(0.40),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,9,Tab8,sources/da2025_fulltext.xml,true
+por,M10,Medu_3,0.46,0.40,0.46,0.40,0.46,(0.40),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,10,Tab8,sources/da2025_fulltext.xml,true
+mat,M1,Medu_4,3.07,0.85,3.07,0.85,3.07***,(0.85),2,2,0.0050000001,0.0050000001,***,https://www.nature.com/articles/s41598-025-89394-2/tables/8,1,Tab8,sources/da2025_fulltext.xml,true
+mat,M2,Medu_4,2.84,0.86,2.84,0.86,2.84***,(0.86),2,2,0.0050000001,0.0050000001,***,https://www.nature.com/articles/s41598-025-89394-2/tables/8,2,Tab8,sources/da2025_fulltext.xml,true
+mat,M3,Medu_4,2.95,0.86,2.95,0.86,2.95***,(0.86),2,2,0.0050000001,0.0050000001,***,https://www.nature.com/articles/s41598-025-89394-2/tables/8,3,Tab8,sources/da2025_fulltext.xml,true
+mat,M4,Medu_4,2.99,0.90,2.99,0.90,2.99***,(0.90),2,2,0.0050000001,0.0050000001,***,https://www.nature.com/articles/s41598-025-89394-2/tables/8,4,Tab8,sources/da2025_fulltext.xml,true
+por,M7,Medu_4,1.80,0.48,1.80,0.48,1.80***,(0.48),2,2,0.0050000001,0.0050000001,***,https://www.nature.com/articles/s41598-025-89394-2/tables/8,7,Tab8,sources/da2025_fulltext.xml,true
+por,M8,Medu_4,1.89,0.48,1.89,0.48,1.89***,(0.48),2,2,0.0050000001,0.0050000001,***,https://www.nature.com/articles/s41598-025-89394-2/tables/8,8,Tab8,sources/da2025_fulltext.xml,true
+por,M9,Medu_4,1.43,0.49,1.43,0.49,1.43***,(0.49),2,2,0.0050000001,0.0050000001,***,https://www.nature.com/articles/s41598-025-89394-2/tables/8,9,Tab8,sources/da2025_fulltext.xml,true
+por,M10,Medu_4,1.47,0.49,1.47,0.49,1.47***,(0.49),2,2,0.0050000001,0.0050000001,***,https://www.nature.com/articles/s41598-025-89394-2/tables/8,10,Tab8,sources/da2025_fulltext.xml,true
+mat,M1,Fedu_2,0.32,0.72,0.32,0.72,0.32,(0.72),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,1,Tab8,sources/da2025_fulltext.xml,true
+mat,M2,Fedu_2,0.11,0.71,0.11,0.71,0.11,(0.71),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,2,Tab8,sources/da2025_fulltext.xml,true
+mat,M3,Fedu_2,0.098,0.72,0.098,0.72,0.098,(0.72),3,2,0.0005000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,3,Tab8,sources/da2025_fulltext.xml,true
+mat,M4,Fedu_2,0.087,0.72,0.087,0.72,0.087,(0.72),3,2,0.0005000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,4,Tab8,sources/da2025_fulltext.xml,true
+por,M7,Fedu_2,0.48,0.36,0.48,0.36,0.48,(0.36),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,7,Tab8,sources/da2025_fulltext.xml,true
+por,M8,Fedu_2,0.46,0.35,0.46,0.35,0.46,(0.35),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,8,Tab8,sources/da2025_fulltext.xml,true
+por,M9,Fedu_2,0.48,0.33,0.48,0.33,0.48,(0.33),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,9,Tab8,sources/da2025_fulltext.xml,true
+por,M10,Fedu_2,0.43,0.33,0.43,0.33,0.43,(0.33),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,10,Tab8,sources/da2025_fulltext.xml,true
+mat,M1,Fedu_3,0.18,0.74,0.18,0.74,0.18,(0.74),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,1,Tab8,sources/da2025_fulltext.xml,true
+mat,M2,Fedu_3,0.0094,0.73,0.0094,0.73,0.0094,(0.73),4,2,0.0000500001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,2,Tab8,sources/da2025_fulltext.xml,true
+mat,M3,Fedu_3,-0.0042,0.73,− 0.0042,0.73,− 0.0042,(0.73),4,2,0.0000500001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,3,Tab8,sources/da2025_fulltext.xml,true
+mat,M4,Fedu_3,-0.046,0.75,− 0.046,0.75,− 0.046,(0.75),3,2,0.0005000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,4,Tab8,sources/da2025_fulltext.xml,true
+por,M7,Fedu_3,0.77,0.39,0.77,0.39,0.77**,(0.39),2,2,0.0050000001,0.0050000001,**,https://www.nature.com/articles/s41598-025-89394-2/tables/8,7,Tab8,sources/da2025_fulltext.xml,true
+por,M8,Fedu_3,0.75,0.37,0.75,0.37,0.75**,(0.37),2,2,0.0050000001,0.0050000001,**,https://www.nature.com/articles/s41598-025-89394-2/tables/8,8,Tab8,sources/da2025_fulltext.xml,true
+por,M9,Fedu_3,0.61,0.36,0.61,0.36,0.61*,(0.36),2,2,0.0050000001,0.0050000001,*,https://www.nature.com/articles/s41598-025-89394-2/tables/8,9,Tab8,sources/da2025_fulltext.xml,true
+por,M10,Fedu_3,0.53,0.36,0.53,0.36,0.53,(0.36),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,10,Tab8,sources/da2025_fulltext.xml,true
+mat,M1,Fedu_4,0.29,0.88,0.29,0.88,0.29,(0.88),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,1,Tab8,sources/da2025_fulltext.xml,true
+mat,M2,Fedu_4,0.067,0.89,0.067,0.89,0.067,(0.89),3,2,0.0005000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,2,Tab8,sources/da2025_fulltext.xml,true
+mat,M3,Fedu_4,0.039,0.89,0.039,0.89,0.039,(0.89),3,2,0.0005000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,3,Tab8,sources/da2025_fulltext.xml,true
+mat,M4,Fedu_4,-0.0086,0.91,− 0.0086,0.91,− 0.0086,(0.91),4,2,0.0000500001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,4,Tab8,sources/da2025_fulltext.xml,true
+por,M7,Fedu_4,0.85,0.48,0.85,0.48,0.85*,(0.48),2,2,0.0050000001,0.0050000001,*,https://www.nature.com/articles/s41598-025-89394-2/tables/8,7,Tab8,sources/da2025_fulltext.xml,true
+por,M8,Fedu_4,0.83,0.47,0.83,0.47,0.83*,(0.47),2,2,0.0050000001,0.0050000001,*,https://www.nature.com/articles/s41598-025-89394-2/tables/8,8,Tab8,sources/da2025_fulltext.xml,true
+por,M9,Fedu_4,0.69,0.45,0.69,0.45,0.69,(0.45),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,9,Tab8,sources/da2025_fulltext.xml,true
+por,M10,Fedu_4,0.61,0.45,0.61,0.45,0.61,(0.45),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,10,Tab8,sources/da2025_fulltext.xml,true
+mat,M2,age,-0.44,0.18,− 0.44,0.18,− 0.44**,(0.18),2,2,0.0050000001,0.0050000001,**,https://www.nature.com/articles/s41598-025-89394-2/tables/8,2,Tab8,sources/da2025_fulltext.xml,true
+mat,M3,age,-0.50,0.20,− 0.50,0.20,− 0.50**,(0.20),2,2,0.0050000001,0.0050000001,**,https://www.nature.com/articles/s41598-025-89394-2/tables/8,3,Tab8,sources/da2025_fulltext.xml,true
+mat,M4,age,-0.48,0.22,− 0.48,0.22,− 0.48**,(0.22),2,2,0.0050000001,0.0050000001,**,https://www.nature.com/articles/s41598-025-89394-2/tables/8,4,Tab8,sources/da2025_fulltext.xml,true
+por,M8,age,-0.20,0.10,− 0.20,0.10,− 0.20**,(0.10),2,2,0.0050000001,0.0050000001,**,https://www.nature.com/articles/s41598-025-89394-2/tables/8,8,Tab8,sources/da2025_fulltext.xml,true
+por,M9,age,-0.16,0.098,− 0.16,0.098,− 0.16*,(0.098),2,3,0.0050000001,0.0005000001,*,https://www.nature.com/articles/s41598-025-89394-2/tables/8,9,Tab8,sources/da2025_fulltext.xml,true
+por,M10,age,-0.10,0.11,− 0.10,0.11,− 0.10,(0.11),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,10,Tab8,sources/da2025_fulltext.xml,true
+mat,M2,sex_F,-0.75,0.45,− 0.75,0.45,− 0.75*,(0.45),2,2,0.0050000001,0.0050000001,*,https://www.nature.com/articles/s41598-025-89394-2/tables/8,2,Tab8,sources/da2025_fulltext.xml,true
+mat,M3,sex_F,-0.75,0.45,− 0.75,0.45,− 0.75*,(0.45),2,2,0.0050000001,0.0050000001,*,https://www.nature.com/articles/s41598-025-89394-2/tables/8,3,Tab8,sources/da2025_fulltext.xml,true
+mat,M4,sex_F,-0.73,0.45,− 0.73,0.45,− 0.73,(0.45),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,4,Tab8,sources/da2025_fulltext.xml,true
+por,M8,sex_F,1.12,0.26,1.12,0.26,1.12***,(0.26),2,2,0.0050000001,0.0050000001,***,https://www.nature.com/articles/s41598-025-89394-2/tables/8,8,Tab8,sources/da2025_fulltext.xml,true
+por,M9,sex_F,1.21,0.25,1.21,0.25,1.21***,(0.25),2,2,0.0050000001,0.0050000001,***,https://www.nature.com/articles/s41598-025-89394-2/tables/8,9,Tab8,sources/da2025_fulltext.xml,true
+por,M10,sex_F,1.23,0.25,1.23,0.25,1.23***,(0.25),2,2,0.0050000001,0.0050000001,***,https://www.nature.com/articles/s41598-025-89394-2/tables/8,10,Tab8,sources/da2025_fulltext.xml,true
+mat,M3,school_GP,-0.64,0.70,− 0.64,0.70,− 0.64,(0.70),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,3,Tab8,sources/da2025_fulltext.xml,true
+mat,M4,school_GP,-0.62,0.70,− 0.62,0.70,− 0.62,(0.70),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,4,Tab8,sources/da2025_fulltext.xml,true
+por,M9,school_GP,1.66,0.30,1.66,0.30,1.66***,(0.30),2,2,0.0050000001,0.0050000001,***,https://www.nature.com/articles/s41598-025-89394-2/tables/8,9,Tab8,sources/da2025_fulltext.xml,true
+por,M10,school_GP,1.72,0.30,1.72,0.30,1.72***,(0.30),2,2,0.0050000001,0.0050000001,***,https://www.nature.com/articles/s41598-025-89394-2/tables/8,10,Tab8,sources/da2025_fulltext.xml,true
+mat,M4,guardian_mother,0.041,0.99,0.041,0.99,0.041,(0.99),3,2,0.0005000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,4,Tab8,sources/da2025_fulltext.xml,true
+por,M10,guardian_mother,1.14,0.54,1.14,0.54,1.14**,(0.54),2,2,0.0050000001,0.0050000001,**,https://www.nature.com/articles/s41598-025-89394-2/tables/8,10,Tab8,sources/da2025_fulltext.xml,true
+mat,M4,guardian_father,0.25,1.08,0.25,1.08,0.25,(1.08),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,4,Tab8,sources/da2025_fulltext.xml,true
+por,M10,guardian_father,0.64,0.47,0.64,0.47,0.64,(0.47),2,2,0.0050000001,0.0050000001,,https://www.nature.com/articles/s41598-025-89394-2/tables/8,10,Tab8,sources/da2025_fulltext.xml,true

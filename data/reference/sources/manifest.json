@@ -1,0 +1,25 @@
+[
+  {
+    "file": "uci320.html",
+    "url": "https://archive.ics.uci.edu/dataset/320/student+performance",
+    "final_url": "https://archive.ics.uci.edu/dataset/320/student+performance",
+    "sha256": "e5b1480b6f4a87d8b871f37463bfb5deb8ecf1249dd0706cc216b6585977443e",
+    "retrieved_at_utc": "2026-11-05T13:14:44.865455+00:00",
+    "bytes": 264380
+  },
+  {
+    "file": "da2025_fulltext.xml",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11968921/fullTextXML",
+    "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11968921/fullTextXML",
+    "sha256": "ffc616fba3594acdfb3b67922113b9000a4105becf31fe0638fa5fcc5de416a2",
+    "retrieved_at_utc": "2026-11-05T13:15:03.786667+00:00",
+    "bytes": 234111
+  },
+  {
+    "file": "table8_source_cells.json",
+    "derived_from": "da2025_fulltext.xml",
+    "xml_id": "Tab8",
+    "sha256": "ec32862aab84093afa84591fff826ae9956f00e6fc21479aee55b748ac26be0b",
+    "note": "Похідний читабельний експорт клітинок; незалежна перевірка має читати XML/першоджерело, а не лише цей експорт."
+  }
+]
