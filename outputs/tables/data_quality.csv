@@ -1,0 +1,139 @@
+subject,column,check,value,status
+mat,school,missing,0,pass
+mat,school,observed_values,"[""GP"", ""MS""]",info
+mat,sex,missing,0,pass
+mat,sex,observed_values,"[""F"", ""M""]",info
+mat,age,missing,0,pass
+mat,age,observed_values,"[15, 16, 17, 18, 19, 20, 21, 22]",info
+mat,address,missing,0,pass
+mat,address,observed_values,"[""R"", ""U""]",info
+mat,famsize,missing,0,pass
+mat,famsize,observed_values,"[""GT3"", ""LE3""]",info
+mat,Pstatus,missing,0,pass
+mat,Pstatus,observed_values,"[""A"", ""T""]",info
+mat,Medu,missing,0,pass
+mat,Medu,observed_values,"[0, 1, 2, 3, 4]",info
+mat,Fedu,missing,0,pass
+mat,Fedu,observed_values,"[0, 1, 2, 3, 4]",info
+mat,Mjob,missing,0,pass
+mat,Mjob,observed_values,"[""at_home"", ""health"", ""other"", ""services"", ""teacher""]",info
+mat,Fjob,missing,0,pass
+mat,Fjob,observed_values,"[""at_home"", ""health"", ""other"", ""services"", ""teacher""]",info
+mat,reason,missing,0,pass
+mat,reason,observed_values,"[""course"", ""home"", ""other"", ""reputation""]",info
+mat,guardian,missing,0,pass
+mat,guardian,observed_values,"[""father"", ""mother"", ""other""]",info
+mat,traveltime,missing,0,pass
+mat,traveltime,observed_values,"[1, 2, 3, 4]",info
+mat,studytime,missing,0,pass
+mat,studytime,observed_values,"[1, 2, 3, 4]",info
+mat,failures,missing,0,pass
+mat,failures,observed_values,"[0, 1, 2, 3]",info
+mat,schoolsup,missing,0,pass
+mat,schoolsup,observed_values,"[""no"", ""yes""]",info
+mat,famsup,missing,0,pass
+mat,famsup,observed_values,"[""no"", ""yes""]",info
+mat,paid,missing,0,pass
+mat,paid,observed_values,"[""no"", ""yes""]",info
+mat,activities,missing,0,pass
+mat,activities,observed_values,"[""no"", ""yes""]",info
+mat,nursery,missing,0,pass
+mat,nursery,observed_values,"[""no"", ""yes""]",info
+mat,higher,missing,0,pass
+mat,higher,observed_values,"[""no"", ""yes""]",info
+mat,internet,missing,0,pass
+mat,internet,observed_values,"[""no"", ""yes""]",info
+mat,romantic,missing,0,pass
+mat,romantic,observed_values,"[""no"", ""yes""]",info
+mat,famrel,missing,0,pass
+mat,famrel,observed_values,"[1, 2, 3, 4, 5]",info
+mat,freetime,missing,0,pass
+mat,freetime,observed_values,"[1, 2, 3, 4, 5]",info
+mat,goout,missing,0,pass
+mat,goout,observed_values,"[1, 2, 3, 4, 5]",info
+mat,Dalc,missing,0,pass
+mat,Dalc,observed_values,"[1, 2, 3, 4, 5]",info
+mat,Walc,missing,0,pass
+mat,Walc,observed_values,"[1, 2, 3, 4, 5]",info
+mat,health,missing,0,pass
+mat,health,observed_values,"[1, 2, 3, 4, 5]",info
+mat,absences,missing,0,pass
+mat,absences,observed_values,"[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 28, 30, 38, 40, 54, 56, 75]",info
+mat,G1,missing,0,pass
+mat,G1,observed_values,"[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]",info
+mat,G2,missing,0,pass
+mat,G2,observed_values,"[0, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]",info
+mat,G3,missing,0,pass
+mat,G3,observed_values,"[0, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]",info
+mat,,nobs,395,info
+mat,,exact_duplicate_excess,0,info
+mat,,zero_G3,38,info
+por,school,missing,0,pass
+por,school,observed_values,"[""GP"", ""MS""]",info
+por,sex,missing,0,pass
+por,sex,observed_values,"[""F"", ""M""]",info
+por,age,missing,0,pass
+por,age,observed_values,"[15, 16, 17, 18, 19, 20, 21, 22]",info
+por,address,missing,0,pass
+por,address,observed_values,"[""R"", ""U""]",info
+por,famsize,missing,0,pass
+por,famsize,observed_values,"[""GT3"", ""LE3""]",info
+por,Pstatus,missing,0,pass
+por,Pstatus,observed_values,"[""A"", ""T""]",info
+por,Medu,missing,0,pass
+por,Medu,observed_values,"[0, 1, 2, 3, 4]",info
+por,Fedu,missing,0,pass
+por,Fedu,observed_values,"[0, 1, 2, 3, 4]",info
+por,Mjob,missing,0,pass
+por,Mjob,observed_values,"[""at_home"", ""health"", ""other"", ""services"", ""teacher""]",info
+por,Fjob,missing,0,pass
+por,Fjob,observed_values,"[""at_home"", ""health"", ""other"", ""services"", ""teacher""]",info
+por,reason,missing,0,pass
+por,reason,observed_values,"[""course"", ""home"", ""other"", ""reputation""]",info
+por,guardian,missing,0,pass
+por,guardian,observed_values,"[""father"", ""mother"", ""other""]",info
+por,traveltime,missing,0,pass
+por,traveltime,observed_values,"[1, 2, 3, 4]",info
+por,studytime,missing,0,pass
+por,studytime,observed_values,"[1, 2, 3, 4]",info
+por,failures,missing,0,pass
+por,failures,observed_values,"[0, 1, 2, 3]",info
+por,schoolsup,missing,0,pass
+por,schoolsup,observed_values,"[""no"", ""yes""]",info
+por,famsup,missing,0,pass
+por,famsup,observed_values,"[""no"", ""yes""]",info
+por,paid,missing,0,pass
+por,paid,observed_values,"[""no"", ""yes""]",info
+por,activities,missing,0,pass
+por,activities,observed_values,"[""no"", ""yes""]",info
+por,nursery,missing,0,pass
+por,nursery,observed_values,"[""no"", ""yes""]",info
+por,higher,missing,0,pass
+por,higher,observed_values,"[""no"", ""yes""]",info
+por,internet,missing,0,pass
+por,internet,observed_values,"[""no"", ""yes""]",info
+por,romantic,missing,0,pass
+por,romantic,observed_values,"[""no"", ""yes""]",info
+por,famrel,missing,0,pass
+por,famrel,observed_values,"[1, 2, 3, 4, 5]",info
+por,freetime,missing,0,pass
+por,freetime,observed_values,"[1, 2, 3, 4, 5]",info
+por,goout,missing,0,pass
+por,goout,observed_values,"[1, 2, 3, 4, 5]",info
+por,Dalc,missing,0,pass
+por,Dalc,observed_values,"[1, 2, 3, 4, 5]",info
+por,Walc,missing,0,pass
+por,Walc,observed_values,"[1, 2, 3, 4, 5]",info
+por,health,missing,0,pass
+por,health,observed_values,"[1, 2, 3, 4, 5]",info
+por,absences,missing,0,pass
+por,absences,observed_values,"[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 21, 22, 24, 26, 30, 32]",info
+por,G1,missing,0,pass
+por,G1,observed_values,"[0, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]",info
+por,G2,missing,0,pass
+por,G2,observed_values,"[0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]",info
+por,G3,missing,0,pass
+por,G3,observed_values,"[0, 1, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]",info
+por,,nobs,649,info
+por,,exact_duplicate_excess,0,info
+por,,zero_G3,15,info

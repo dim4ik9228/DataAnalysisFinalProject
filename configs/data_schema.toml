@@ -1,0 +1,277 @@
+[dataset]
+source_url = "https://archive.ics.uci.edu/dataset/320/student+performance"
+doi = "10.24432/C5TG7T"
+encoding = "utf-8"
+delimiter = ";"
+expected_columns = 33
+expected_rows = { mat = 395, por = 649 }
+missing_policy = "error"
+
+[[columns]]
+name = "school"
+dtype = "categorical"
+description = "Школа"
+role = "control"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = ["GP", "MS"]
+
+[[columns]]
+name = "sex"
+dtype = "categorical"
+description = "Стать у вихідному кодуванні"
+role = "control"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = ["F", "M"]
+
+[[columns]]
+name = "age"
+dtype = "integer"
+description = "Вік у роках"
+role = "control"
+source = "UCI id320 Additional Variable Information; student.txt"
+min = 15
+max = 22
+
+[[columns]]
+name = "address"
+dtype = "categorical"
+description = "Міська або сільська адреса"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = ["U", "R"]
+
+[[columns]]
+name = "famsize"
+dtype = "categorical"
+description = "Розмір сім’ї до3 або понад3"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = ["LE3", "GT3"]
+
+[[columns]]
+name = "Pstatus"
+dtype = "categorical"
+description = "Батьки живуть разом або окремо"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = ["T", "A"]
+
+[[columns]]
+name = "Medu"
+dtype = "integer"
+description = "Освіта матері:0без освіти;1початкова;2п’ятий–дев’ятий;3середня;4вища"
+role = "factor"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = [0, 1, 2, 3, 4]
+
+[[columns]]
+name = "Fedu"
+dtype = "integer"
+description = "Освіта батька:0без освіти;1початкова;2п’ятий–дев’ятий;3середня;4вища"
+role = "factor"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = [0, 1, 2, 3, 4]
+
+[[columns]]
+name = "Mjob"
+dtype = "categorical"
+description = "Заняття відповідного з батьків"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = ["teacher", "health", "services", "at_home", "other"]
+
+[[columns]]
+name = "Fjob"
+dtype = "categorical"
+description = "Заняття відповідного з батьків"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = ["teacher", "health", "services", "at_home", "other"]
+
+[[columns]]
+name = "reason"
+dtype = "categorical"
+description = "Причина вибору школи"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = ["home", "reputation", "course", "other"]
+
+[[columns]]
+name = "guardian"
+dtype = "categorical"
+description = "Опікун"
+role = "control"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = ["mother", "father", "other"]
+
+[[columns]]
+name = "traveltime"
+dtype = "integer"
+description = "Час дороги:1<15хв;2=15–30хв;3=30–60хв;4>60хв; категорії, не хвилини"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = [1, 2, 3, 4]
+
+[[columns]]
+name = "studytime"
+dtype = "integer"
+description = "Тижневий час навчання:1<2год;2=2–5год;3=5–10год;4>10год; категорії, не години"
+role = "robustness"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = [1, 2, 3, 4]
+
+[[columns]]
+name = "failures"
+dtype = "integer"
+description = "Код попередніх невдач. Формулювання student.txt неоднозначне (n if1<=n<3 else4), але у файлах є0–3; консервативний домен0–4, без перекодування; не необмежена кількість"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = [0, 1, 2, 3, 4]
+
+[[columns]]
+name = "schoolsup"
+dtype = "categorical"
+description = "Додаткова підтримка школи"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = ["yes", "no"]
+
+[[columns]]
+name = "famsup"
+dtype = "categorical"
+description = "Освітня підтримка сім’ї"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = ["yes", "no"]
+
+[[columns]]
+name = "paid"
+dtype = "categorical"
+description = "Платні додаткові заняття"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = ["yes", "no"]
+
+[[columns]]
+name = "activities"
+dtype = "categorical"
+description = "Позакласні заняття"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = ["yes", "no"]
+
+[[columns]]
+name = "nursery"
+dtype = "categorical"
+description = "Відвідував дошкільний заклад"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = ["yes", "no"]
+
+[[columns]]
+name = "higher"
+dtype = "categorical"
+description = "Прагне вищої освіти"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = ["yes", "no"]
+
+[[columns]]
+name = "internet"
+dtype = "categorical"
+description = "Інтернет удома"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = ["yes", "no"]
+
+[[columns]]
+name = "romantic"
+dtype = "categorical"
+description = "Романтичні стосунки"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = ["yes", "no"]
+
+[[columns]]
+name = "famrel"
+dtype = "integer"
+description = "Якість сімейних стосунків; порядкова шкала1–5"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = [1, 2, 3, 4, 5]
+
+[[columns]]
+name = "freetime"
+dtype = "integer"
+description = "Вільний час; порядкова шкала1–5"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = [1, 2, 3, 4, 5]
+
+[[columns]]
+name = "goout"
+dtype = "integer"
+description = "Гуляння з друзями; порядкова шкала1–5"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = [1, 2, 3, 4, 5]
+
+[[columns]]
+name = "Dalc"
+dtype = "integer"
+description = "Алкоголь у робочі дні; порядкова шкала1–5"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = [1, 2, 3, 4, 5]
+
+[[columns]]
+name = "Walc"
+dtype = "integer"
+description = "Алкоголь у вихідні; порядкова шкала1–5"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = [1, 2, 3, 4, 5]
+
+[[columns]]
+name = "health"
+dtype = "integer"
+description = "Самооцінка здоров’я; порядкова шкала1–5"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+allowed = [1, 2, 3, 4, 5]
+
+[[columns]]
+name = "absences"
+dtype = "integer"
+description = "Кількість пропусків"
+role = "context"
+source = "UCI id320 Additional Variable Information; student.txt"
+min = 0
+max = 93
+
+[[columns]]
+name = "G1"
+dtype = "integer"
+description = "Оцінка за період;0–20"
+role = "prior_grade_not_predictor"
+source = "UCI id320 Additional Variable Information; student.txt"
+min = 0
+max = 20
+
+[[columns]]
+name = "G2"
+dtype = "integer"
+description = "Оцінка за період;0–20"
+role = "prior_grade_not_predictor"
+source = "UCI id320 Additional Variable Information; student.txt"
+min = 0
+max = 20
+
+[[columns]]
+name = "G3"
+dtype = "integer"
+description = "Оцінка за період;0–20"
+role = "outcome"
+source = "UCI id320 Additional Variable Information; student.txt"
+min = 0
+max = 20

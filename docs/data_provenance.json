@@ -1,0 +1,32 @@
+{
+  "source_url": "https://archive.ics.uci.edu/dataset/320/student+performance",
+  "download_url": "https://archive.ics.uci.edu/static/public/320/student+performance.zip",
+  "final_url": "https://archive.ics.uci.edu/static/public/320/student+performance.zip",
+  "doi": "10.24432/C5TG7T",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "retrieved_at_utc": "2026-11-05T18:37:11.168704+00:00",
+  "archive_member": "student.zip",
+  "files": {
+    "student-performance.zip": {
+      "sha256": "82ae9d66437b9808df42e8c89d2bb179c46e9cfbcf06f38abc1d20b3b747e177",
+      "bytes": 40735
+    },
+    "student.zip": {
+      "sha256": "4f671ae4598c20bb4e64de0f65931c98a609a52e383604e2601bd8f7e3822427",
+      "bytes": 20478
+    },
+    "student-mat.csv": {
+      "sha256": "e47f9ee225e1ee6e69b7564e6dac7123e80b8486677fe111f351964cef5dec80",
+      "bytes": 56993
+    },
+    "student-por.csv": {
+      "sha256": "a7594a11d7771c0efe1a740824e0e833da9c4cad07c39a9766a874575563fb3f",
+      "bytes": 93220
+    },
+    "student.txt": {
+      "sha256": "f8d3e734e237071312790ca667330c66d75e706317f8d5e2125c479d70e962c1",
+      "bytes": 3206
+    }
+  }
+}

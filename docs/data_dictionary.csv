@@ -1,0 +1,34 @@
+name,dtype,allowed,min,max,description,role,source
+school,categorical,"[""GP"", ""MS""]",,,Школа,control,UCI id320 Additional Variable Information; student.txt
+sex,categorical,"[""F"", ""M""]",,,Стать у вихідному кодуванні,control,UCI id320 Additional Variable Information; student.txt
+age,integer,,15,22,Вік у роках,control,UCI id320 Additional Variable Information; student.txt
+address,categorical,"[""U"", ""R""]",,,Міська або сільська адреса,context,UCI id320 Additional Variable Information; student.txt
+famsize,categorical,"[""LE3"", ""GT3""]",,,Розмір сім’ї до3 або понад3,context,UCI id320 Additional Variable Information; student.txt
+Pstatus,categorical,"[""T"", ""A""]",,,Батьки живуть разом або окремо,context,UCI id320 Additional Variable Information; student.txt
+Medu,integer,"[0, 1, 2, 3, 4]",,,Освіта матері:0без освіти;1початкова;2п’ятий–дев’ятий;3середня;4вища,factor,UCI id320 Additional Variable Information; student.txt
+Fedu,integer,"[0, 1, 2, 3, 4]",,,Освіта батька:0без освіти;1початкова;2п’ятий–дев’ятий;3середня;4вища,factor,UCI id320 Additional Variable Information; student.txt
+Mjob,categorical,"[""teacher"", ""health"", ""services"", ""at_home"", ""other""]",,,Заняття відповідного з батьків,context,UCI id320 Additional Variable Information; student.txt
+Fjob,categorical,"[""teacher"", ""health"", ""services"", ""at_home"", ""other""]",,,Заняття відповідного з батьків,context,UCI id320 Additional Variable Information; student.txt
+reason,categorical,"[""home"", ""reputation"", ""course"", ""other""]",,,Причина вибору школи,context,UCI id320 Additional Variable Information; student.txt
+guardian,categorical,"[""mother"", ""father"", ""other""]",,,Опікун,control,UCI id320 Additional Variable Information; student.txt
+traveltime,integer,"[1, 2, 3, 4]",,,"Час дороги:1<15хв;2=15–30хв;3=30–60хв;4>60хв; категорії, не хвилини",context,UCI id320 Additional Variable Information; student.txt
+studytime,integer,"[1, 2, 3, 4]",,,"Тижневий час навчання:1<2год;2=2–5год;3=5–10год;4>10год; категорії, не години",robustness,UCI id320 Additional Variable Information; student.txt
+failures,integer,"[0, 1, 2, 3, 4]",,,"Код попередніх невдач. Формулювання student.txt неоднозначне (n if1<=n<3 else4), але у файлах є0–3; консервативний домен0–4, без перекодування; не необмежена кількість",context,UCI id320 Additional Variable Information; student.txt
+schoolsup,categorical,"[""yes"", ""no""]",,,Додаткова підтримка школи,context,UCI id320 Additional Variable Information; student.txt
+famsup,categorical,"[""yes"", ""no""]",,,Освітня підтримка сім’ї,context,UCI id320 Additional Variable Information; student.txt
+paid,categorical,"[""yes"", ""no""]",,,Платні додаткові заняття,context,UCI id320 Additional Variable Information; student.txt
+activities,categorical,"[""yes"", ""no""]",,,Позакласні заняття,context,UCI id320 Additional Variable Information; student.txt
+nursery,categorical,"[""yes"", ""no""]",,,Відвідував дошкільний заклад,context,UCI id320 Additional Variable Information; student.txt
+higher,categorical,"[""yes"", ""no""]",,,Прагне вищої освіти,context,UCI id320 Additional Variable Information; student.txt
+internet,categorical,"[""yes"", ""no""]",,,Інтернет удома,context,UCI id320 Additional Variable Information; student.txt
+romantic,categorical,"[""yes"", ""no""]",,,Романтичні стосунки,context,UCI id320 Additional Variable Information; student.txt
+famrel,integer,"[1, 2, 3, 4, 5]",,,Якість сімейних стосунків; порядкова шкала1–5,context,UCI id320 Additional Variable Information; student.txt
+freetime,integer,"[1, 2, 3, 4, 5]",,,Вільний час; порядкова шкала1–5,context,UCI id320 Additional Variable Information; student.txt
+goout,integer,"[1, 2, 3, 4, 5]",,,Гуляння з друзями; порядкова шкала1–5,context,UCI id320 Additional Variable Information; student.txt
+Dalc,integer,"[1, 2, 3, 4, 5]",,,Алкоголь у робочі дні; порядкова шкала1–5,context,UCI id320 Additional Variable Information; student.txt
+Walc,integer,"[1, 2, 3, 4, 5]",,,Алкоголь у вихідні; порядкова шкала1–5,context,UCI id320 Additional Variable Information; student.txt
+health,integer,"[1, 2, 3, 4, 5]",,,Самооцінка здоров’я; порядкова шкала1–5,context,UCI id320 Additional Variable Information; student.txt
+absences,integer,,0,93,Кількість пропусків,context,UCI id320 Additional Variable Information; student.txt
+G1,integer,,0,20,Оцінка за період;0–20,prior_grade_not_predictor,UCI id320 Additional Variable Information; student.txt
+G2,integer,,0,20,Оцінка за період;0–20,prior_grade_not_predictor,UCI id320 Additional Variable Information; student.txt
+G3,integer,,0,20,Оцінка за період;0–20,outcome,UCI id320 Additional Variable Information; student.txt

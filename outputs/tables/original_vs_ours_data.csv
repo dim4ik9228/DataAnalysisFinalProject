@@ -1,0 +1,3 @@
+subject,n_raw,n_excluded,n_ours,n_original,n_config,status,filter,education_codes_retained,education_reference,g3_zero_policy,train_test_split,imputation,duplicate_policy,n_raw_source,raw_status
+mat,395,5,390,390,390,match,Medu>=1 & Fedu>=1,1|2|3|4,1,retain,False,none,retain,395,match
+por,649,12,637,637,637,match,Medu>=1 & Fedu>=1,1|2|3|4,1,retain,False,none,retain,649,match
