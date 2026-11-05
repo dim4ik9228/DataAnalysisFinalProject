@@ -1,0 +1,19 @@
+[project]
+seed = 20261105
+status = "scaffold"
+
+[replication]
+doi = "10.1038/s41598-025-89394-2"
+table = 8
+subjects = ["mat", "por"]
+outcome = "G3"
+education_reference = 1
+education_levels = [1, 2, 3, 4]
+exclude_parent_education_zero = true
+exclude_zero_grades = false
+# До аналітичного запуску перевірити вид стандартних похибок оригіналу.
+standard_errors = "unresolved"
+
+[expected_sample]
+mat = 390
+por = 637
