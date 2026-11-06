@@ -6,7 +6,8 @@
 P03 завершено: дані підготовлено, запуск відтворено, незалежний аудит пройдено.
 P04 завершено: 8 описових таблиць, 5 графіків у PNG/SVG, незалежний аудит.
 P05 реалізовано: 7 моделей збігаються повністю, M10 частково; глобально 82/84 перевірки.
-Ноутбуки 00–03 виконуються в чистих ядрах; 04–05 залишаються шаблонами.
+P06 реалізовано: R1–R5, описове H3 та два фіксовані noise-плацебо.
+Ноутбуки 00–04 виконуються в чистих ядрах; 05 залишається шаблоном.
 Вибірки реплікації: **390** записів mat і **637** por. H1 підтримано в обох предметах; для H2 недостатньо доказів різниці коефіцієнтів.
 Відкриті застереження P02: точний авторський тип SE невідомий; три тематично пов'язані роботи не замінюють буквально вимогу курсу про 3–5 citing/checking робіт.
 
@@ -76,8 +77,8 @@ uv run --locked jupyter nbconvert --to notebook --execute notebooks/00_project_s
 використовуйте Restart Kernel and Run All Cells.
 
 Ноутбуки виконувати за номерами 00 → 01 → 02 → 03 → 04 → 05, кожен у чистому ядрі.
-Реалізовано ноутбуки 00–03. [K2](docs/K2_replication.md) описує частковий
-числовий збіг і готовність до планування P06.
+Реалізовано ноутбуки 00–04. [K2](docs/K2_replication.md) описує частковий
+числовий збіг, [передача P07](docs/P06_handoff.md) — результати стійкості й межі синтезу.
 
 ### Типові проблеми
 
@@ -155,7 +156,30 @@ replication_run.status=failed. Старі результати після failed
 66/68 коефіцієнтів, усі N та adjusted R² збігаються; guardian-пара M10 має
 невирішений незбіг, можливу перестановку підписів. SE оригіналу невідомий:
 HC3 основний, nonrobust/HC1 звітуються окремо. H1/H2 перевірено двобічно з
-окремими Holm-сімействами; studytime/плацебо/стійкість залишаються для P06.
+окремими Holm-сімействами; studytime/плацебо/стійкість реалізовано окремо у P06.
+
+### Стійкість P06
+
+```powershell
+uv run --locked jupyter nbconvert --to notebook --execute notebooks/04_robustness.ipynb --output 04_robustness.executed.ipynb --output-dir outputs/executed --ExecutePreprocessor.timeout=120 --ExecutePreprocessor.kernel_name=parentedu-replication
+uv run --locked pytest -q
+```
+
+Потрібні актуальні P03–P05 та локальні рядкові diagnostics P05: після checkout
+виконати ноутбуки 00→01→02→03→04 у чистих ядрах. Workflow перевіряє всі
+source/input/output hashes P05 і K2, потім4390 baseline-перевірок на atol=rtol=1e-10.
+Помилка до/під час fit/export скасовує ready; очікувана R4-відмова його не скасовує.
+Метадані — outputs/logs/robustness_run.json, успішний статус ready.
+
+Усі16 кандидатів присутні,15 оцінено; mat/MS N46 має not_estimable з причиною.
+8 CSV — outputs/tables/robustness_*;3 PNG/SVG-пари — outputs/figures/robustness_*.
+Membership, row_diagnostics і noise залишаються локально в data/processed/robustness_*.
+Повтор відтворює всі18 output-хешів, включно з фіксованим шумом;178 тестів проходять.
+
+[Висновки](docs/robustness_findings.md), [аудит](docs/reviews/P06_robustness_review.md),
+[передача P07](docs/P06_handoff.md). Усі p/CI P06 описові/sensitivity, CI не одночасні.
+Ordinal-нахили мають інші одиниці; delta_abs studytime не є тестом медіації.
+H1/H2 P05 і невирішені M10/SE застереження незмінні. K3 ще не пройдена.
 
 ### Ролі агентів
 

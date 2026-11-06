@@ -45,7 +45,10 @@ data/processed і явні артефакти; моделі повторно б�
 - models.py: реалізовано P05 — явні X/y, OLS/HC3/HC1/nonrobust, H1/H2 і діагностика.
 - replication.py: еталони/Decimal-порівняння й окремі вердикти; replication_workflow.py: preflight/метадані.
 - replication_reporting.py: 4 діагностичні фігури; EDA reporting.py незмінний.
-- robustness.py: майбутні специфікації стійкості та noise-плацебо P06; базовий тест рівності вже у models.py.
+- robustness.py: реалізовано P06 — окремі R1–R5, HC3, H3, фіксований noise та statuses.
+- robustness_baseline.py: звірка M4/M10 з P05; robustness_workflow.py: preflight/експорти/метадані.
+- robustness_reporting.py:3 агреговані фігури; P05-модулі та їхні hashes незмінні.
+- Базовий тест рівності H2 залишається у models.py, не повторюється як нове підтвердження.
 - eda.py: реалізовано P04 — 8 описових таблиць, повні категорії та count-screen.
 - eda_workflow.py: preflight за хешами P03, CSV/висновки, running/ready/failed metadata.
 - reporting.py: реалізовано P04 — 5 графіків із агрегованих CSV у PNG/SVG.
