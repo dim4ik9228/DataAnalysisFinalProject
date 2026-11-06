@@ -44,7 +44,9 @@ data/processed і явні артефакти; моделі повторно б�
 - data_workflow.py: оркестрація notebook01, паспорт/словник, метадані, failed/prepared marker.
 - models.py: формули моделей, OLS, витяг коефіцієнтів і діагностика.
 - robustness.py: специфікації стійкості, перестановки, тест рівності коефіцієнтів.
-- reporting.py: CSV/JSON експорти й графіки зі стабільними назвами.
+- eda.py: реалізовано P04 — 8 описових таблиць, повні категорії та count-screen.
+- eda_workflow.py: preflight за хешами P03, CSV/висновки, running/ready/failed metadata.
+- reporting.py: реалізовано P04 — 5 графіків із агрегованих CSV у PNG/SVG.
 - paths.py, config.py: уже створені мінімальні службові модулі.
 
 environment.py: технічна перевірка .venv, імпортів, lock та локальні метадані запуску (P01).

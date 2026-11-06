@@ -1,0 +1,59 @@
+layer,subject,variable,level,label,count,denominator,proportion,status
+validated,mat,Medu,0,Без освіти,3,395,0.00759493670886,observed
+validated,mat,Medu,1,Початкова,59,395,0.149367088608,observed
+validated,mat,Medu,2,5–9 класи,103,395,0.260759493671,observed
+validated,mat,Medu,3,Середня,99,395,0.250632911392,observed
+validated,mat,Medu,4,Вища,131,395,0.33164556962,observed
+validated,mat,Fedu,0,Без освіти,2,395,0.00506329113924,observed
+validated,mat,Fedu,1,Початкова,82,395,0.207594936709,observed
+validated,mat,Fedu,2,5–9 класи,115,395,0.291139240506,observed
+validated,mat,Fedu,3,Середня,100,395,0.253164556962,observed
+validated,mat,Fedu,4,Вища,96,395,0.243037974684,observed
+validated,por,Medu,0,Без освіти,6,649,0.00924499229584,observed
+validated,por,Medu,1,Початкова,143,649,0.220338983051,observed
+validated,por,Medu,2,5–9 класи,186,649,0.286594761171,observed
+validated,por,Medu,3,Середня,139,649,0.214175654854,observed
+validated,por,Medu,4,Вища,175,649,0.269645608629,observed
+validated,por,Fedu,0,Без освіти,7,649,0.0107858243451,observed
+validated,por,Fedu,1,Початкова,174,649,0.268104776579,observed
+validated,por,Fedu,2,5–9 класи,209,649,0.322033898305,observed
+validated,por,Fedu,3,Середня,131,649,0.201848998459,observed
+validated,por,Fedu,4,Вища,128,649,0.197226502311,observed
+replication,mat,Medu,1,Початкова,58,390,0.148717948718,observed
+replication,mat,Medu,2,5–9 класи,103,390,0.264102564103,observed
+replication,mat,Medu,3,Середня,99,390,0.253846153846,observed
+replication,mat,Medu,4,Вища,130,390,0.333333333333,observed
+replication,mat,Fedu,1,Початкова,81,390,0.207692307692,observed
+replication,mat,Fedu,2,5–9 класи,113,390,0.289743589744,observed
+replication,mat,Fedu,3,Середня,100,390,0.25641025641,observed
+replication,mat,Fedu,4,Вища,96,390,0.246153846154,observed
+replication,mat,studytime,1,<2 год,104,390,0.266666666667,observed
+replication,mat,studytime,2,2–5 год,196,390,0.502564102564,observed
+replication,mat,studytime,3,5–10 год,64,390,0.164102564103,observed
+replication,mat,studytime,4,>10 год,26,390,0.0666666666667,observed
+replication,mat,sex,F,Жіноча (F),206,390,0.528205128205,observed
+replication,mat,sex,M,Чоловіча (M),184,390,0.471794871795,observed
+replication,mat,school,GP,GP,344,390,0.882051282051,observed
+replication,mat,school,MS,MS,46,390,0.117948717949,observed
+replication,mat,guardian,mother,Мати,270,390,0.692307692308,observed
+replication,mat,guardian,father,Батько,89,390,0.228205128205,observed
+replication,mat,guardian,other,Інший,31,390,0.0794871794872,observed
+replication,por,Medu,1,Початкова,138,637,0.216640502355,observed
+replication,por,Medu,2,5–9 класи,186,637,0.291993720565,observed
+replication,por,Medu,3,Середня,139,637,0.218210361068,observed
+replication,por,Medu,4,Вища,174,637,0.273155416013,observed
+replication,por,Fedu,1,Початкова,172,637,0.270015698587,observed
+replication,por,Fedu,2,5–9 класи,206,637,0.323390894819,observed
+replication,por,Fedu,3,Середня,131,637,0.205651491366,observed
+replication,por,Fedu,4,Вища,128,637,0.200941915228,observed
+replication,por,studytime,1,<2 год,205,637,0.321821036107,observed
+replication,por,studytime,2,2–5 год,302,637,0.47409733124,observed
+replication,por,studytime,3,5–10 год,96,637,0.150706436421,observed
+replication,por,studytime,4,>10 год,34,637,0.0533751962323,observed
+replication,por,sex,F,Жіноча (F),376,637,0.590266875981,observed
+replication,por,sex,M,Чоловіча (M),261,637,0.409733124019,observed
+replication,por,school,GP,GP,417,637,0.654631083203,observed
+replication,por,school,MS,MS,220,637,0.345368916797,observed
+replication,por,guardian,mother,Мати,447,637,0.701726844584,observed
+replication,por,guardian,father,Батько,151,637,0.23704866562,observed
+replication,por,guardian,other,Інший,39,637,0.0612244897959,observed

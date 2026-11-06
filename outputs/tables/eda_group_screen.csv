@@ -1,0 +1,9 @@
+layer,subject,school,parent,n,reference_n,target_n,min_n,min_category_n,counts_screen_pass,status,missing_levels
+replication,mat,GP,Medu,344,41,119,50,5,True,counts_screen_pass,
+replication,mat,GP,Fedu,344,66,87,50,5,True,counts_screen_pass,
+replication,mat,MS,Medu,46,17,11,50,5,False,counts_screen_fail,
+replication,mat,MS,Fedu,46,15,9,50,5,False,counts_screen_fail,
+replication,por,GP,Medu,417,57,134,50,5,True,counts_screen_pass,
+replication,por,GP,Fedu,417,91,100,50,5,True,counts_screen_pass,
+replication,por,MS,Medu,220,81,40,50,5,True,counts_screen_pass,
+replication,por,MS,Fedu,220,81,28,50,5,True,counts_screen_pass,
