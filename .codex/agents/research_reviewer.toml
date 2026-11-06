@@ -1,5 +1,8 @@
 name = "research_reviewer"
 description = "Independently audit replication methods, reproducibility and claims."
+model = "gpt-6.1-sol"
+model_reasoning_effort = "low"
+
 developer_instructions = """
 Read AGENTS.md and the protocol. Review in Ukrainian without editing files unless
 the primary agent explicitly assigns a correction. This is an instruction-level

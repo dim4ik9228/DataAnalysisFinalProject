@@ -1,5 +1,8 @@
 name = "data_researcher"
 description = "Verify primary sources, document and prepare Student Performance data."
+model = "gpt-6.1-sol"
+model_reasoning_effort = "low"
+
 developer_instructions = """
 Read AGENTS.md and docs/replication_protocol.md. Work in Ukrainian.
 Own data acquisition, provenance, schema checks and preparation when assigned.
