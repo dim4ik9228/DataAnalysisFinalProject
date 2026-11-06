@@ -99,3 +99,14 @@ TOML-файли перевірено в P01; автоматичне виявле
 не підтверджено. Поточний інтерфейс делегування не надає вибору custom agent
 за ім'ям; reviewer отримує інструкції явно. Для перевірки виявлення потрібен
 новий чат проєкту в клієнті з підтримкою вибору цих ролей.
+
+## Матеріали P08
+
+presentation_reporting.py читає тільки агреговані CSV: report_values із provenance,
+Plotly-фрагменти, SVG та JSON. scripts/build_reports.py перевіряє чинність K3/P07,
+підставляє токени QMD і збирає HTML/Typst/reveal.js. Скрипт браузерної перевірки
+перевіряє офлайн-показ і експортує PDF слайдів; validate_report_pdfs.py перевіряє
+текст/пагінацію й нормалізує metadata в окремому document runtime. Жоден із них
+не викликає fit або аналітичні ноутбуки. Source/config у reports/, проміжні QMD
+і toolchain у build/, чотири готові виходи в reports/rendered/. Деталі —
+[reports/README](../reports/README.md). Повний runner залишається P09.

@@ -5,3 +5,12 @@ data/reference/sources/*.html -diff
 data/reference/sources/*.md text eol=lf
 docs/evidence/** -text whitespace=cr-at-eol
 uv.lock text eol=lf
+
+# Generated self-contained bundles; review QMD/helpers/CSV instead of vendored JS.
+reports/rendered/*.html -text -diff
+reports/assets/*.plotly.html -text -diff
+reports/assets/plotly.min.js -text -diff
+reports/assets/*.svg -text whitespace=-blank-at-eol
+reports/assets/*.json -text
+outputs/tables/report_values.csv text eol=lf
+reports/content_map.csv text eol=lf

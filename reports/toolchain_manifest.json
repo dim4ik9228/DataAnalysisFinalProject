@@ -1,0 +1,16 @@
+{
+  "quarto_version": "1.11.9",
+  "source_url": "https://github.com/quarto-dev/quarto-cli/releases/download/v1.11.9/quarto-1.11.9-win.zip",
+  "archive_sha256": "eda220a2f39c392f622049de013ddf7b4dfdf019ba877f251be14ce43e5734d1",
+  "browser": "Chromium via installed Chrome",
+  "browser_version": "156.0.8078.80",
+  "pdf_metadata_date": "2026-11-06 (project date, normalized)",
+  "pdf_engine": "Quarto Typst",
+  "typst_version": "typst 0.15.1 (9dfd3a08)",
+  "node_version": "v24.22.1",
+  "playwright_version": "1.62.1",
+  "document_packages": "pypdf 6.21.4",
+  "math": "native MathML offline",
+  "browser_automation": "bundled Playwright",
+  "python_packages": "unchanged uv.lock"
+}

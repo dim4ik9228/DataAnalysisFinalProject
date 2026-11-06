@@ -18,3 +18,6 @@ outputs/logs/*
 !outputs/logs/.gitkeep
 build/
 dist/
+
+# Quarto copies of already embedded report figures
+reports/rendered/assets/
