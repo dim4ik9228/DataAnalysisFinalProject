@@ -7,7 +7,8 @@ P03 завершено: дані підготовлено, запуск відт
 P04 завершено: 8 описових таблиць, 5 графіків у PNG/SVG, незалежний аудит.
 P05 реалізовано: 7 моделей збігаються повністю, M10 частково; глобально 82/84 перевірки.
 P06 реалізовано: R1–R5, описове H3 та два фіксовані noise-плацебо.
-Ноутбуки 00–04 виконуються в чистих ядрах; 05 залишається шаблоном.
+P07 реалізовано: синтез H1–H3, реєстр тверджень/доказів і літературний follow-up.
+Ноутбуки 00–05 виконуються в чистих ядрах; [K3](docs/K3_conclusions.md) пройдена, готовність до здачі лишається open.
 Вибірки реплікації: **390** записів mat і **637** por. H1 підтримано в обох предметах; для H2 недостатньо доказів різниці коефіцієнтів.
 Відкриті застереження P02: точний авторський тип SE невідомий; три тематично пов'язані роботи не замінюють буквально вимогу курсу про 3–5 citing/checking робіт.
 
@@ -77,7 +78,7 @@ uv run --locked jupyter nbconvert --to notebook --execute notebooks/00_project_s
 використовуйте Restart Kernel and Run All Cells.
 
 Ноутбуки виконувати за номерами 00 → 01 → 02 → 03 → 04 → 05, кожен у чистому ядрі.
-Реалізовано ноутбуки 00–04. [K2](docs/K2_replication.md) описує частковий
+Реалізовано ноутбуки 00–05. [K2](docs/K2_replication.md) описує частковий
 числовий збіг, [передача P07](docs/P06_handoff.md) — результати стійкості й межі синтезу.
 
 ### Типові проблеми
@@ -180,6 +181,32 @@ Membership, row_diagnostics і noise залишаються локально в 
 [передача P07](docs/P06_handoff.md). Усі p/CI P06 описові/sensitivity, CI не одночасні.
 Ordinal-нахили мають інші одиниці; delta_abs studytime не є тестом медіації.
 H1/H2 P05 і невирішені M10/SE застереження незмінні. K3 ще не пройдена.
+
+### Підсумкові висновки P07
+
+```powershell
+uv run --locked jupyter nbconvert --to notebook --execute notebooks/05_conclusions.ipynb --output 05_conclusions.executed.ipynb --output-dir outputs/executed --ExecutePreprocessor.timeout=120 --ExecutePreprocessor.kernel_name=parentedu-replication
+uv run --locked pytest -q
+```
+
+Notebook05 читає перевірені P05/P06 CSV і локальні літературні докази; нових
+fit, p-values, noise або мережевого пошуку немає. Відсутні/застарілі outputs
+відновлювати відповідним notebook, не текстом із handoff. Preflight перевіряє
+всі source/input/output hashes P05/P06, статуси й аудити.
+
+П'ять final_*.csv лежать в outputs/tables: гіпотези, окремі вердикти, стійкість,
+36 тверджень і179 доказових записів. [Висновки](docs/final_conclusions.md),
+[аудит](docs/reviews/P07_conclusions_review.md), [K3](docs/K3_conclusions.md).
+Метадані — outputs/logs/conclusions_run.json; шість output-хешів відтворюються.
+Усього223 тести проходять; незалежний аудит підтвердив36 тверджень і179 доказів.
+Після аудиту K3_conclusions.json фіксує ці6 хешів і review hash. Перевірка
+після експорту зупиняє запуск, якщо старий K3 стосується інших висновків/review;
+K3 не входить у цикл власного preflight. Невдалий запуск не залишає ready.
+
+[Літературний follow-up](docs/literature_followup.md) підтвердив1 пряме цитування
+первинним текстом і ще1 тільки метаданими; освітніх перевірок таблиці8 не
+підтверджено. Вимога3–5 лишається unresolved; course_submission_status=open.
+Дослідницький PASS K3 не замінює цю вимогу або майбутні звіт/повний запуск P08/P09.
 
 ### Ролі агентів
 

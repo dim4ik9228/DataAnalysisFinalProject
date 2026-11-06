@@ -1,0 +1,14 @@
+{
+  "source_url": "https://equatorscience.com/index.php/jabter/article/view/575",
+  "retrieved_on": "2026-11-06",
+  "http_status": 200,
+  "fetched_html_utf8_sha256": "f1a81c9bf6077508e34978b298647434c8bd9656e9670e1ad10f314a4f01dec5",
+  "snapshot_kind": "selected_reference_evidence_and_reading_notes_not_full_html",
+  "reference_entries_count": 27,
+  "da_reference_matches": [
+    "Da, T. (2025). A three-stage machine learning and inference approach for educational data. Scientific Reports, 15(1). https://doi.org/10.1038/s41598-025-89394-2"
+  ],
+  "abstract_reading_note": "Анкета клієнтів банку BRI; якість AI-сервісу, довіра та лояльність. Не освітній датасет; не перевірка таблиці 8 Da.",
+  "abstract_opening": "Abstract This study aims to analyze the influence of Artificial Intelligence (AI) service quality and customer trust on customer loyalty",
+  "limitations": "Збережено вибрані докази та нотатки, а не повний HTML. Хеш fetched_html описує отриману сторінку; маніфест окремо хешує цей JSON."
+}

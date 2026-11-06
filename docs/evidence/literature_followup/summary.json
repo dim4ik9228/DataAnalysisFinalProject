@@ -1,0 +1,14 @@
+{
+  "verified_direct_count": 1,
+  "primary_metadata_direct_count": 1,
+  "substantive_checking_count": 0,
+  "requirement_status": "unresolved",
+  "status": "unresolved",
+  "required_min": 3,
+  "searched_on": "2026-11-06",
+  "search_scope": "Обмежений exact DOI/title web пошук; Europe PMC citations; OpenAlex incoming citations (3 кандидати); Crossref DOI metadata; первинні видавничі сторінки.",
+  "reason": "Лише 1 пряме цитування підтверджено первинною сторінкою; ще 1 підтверджено видавничими метаданими, але первинний текст недоступний. Третій кандидат має конфлікт HTML/PDF. Навіть два можливі цитування менші за мінімум3; жодну працю не підтверджено як перевірку таблиці8.",
+  "evidencefilemanifest": "docs/evidence/literature_followup/manifest.json",
+  "count_definition": "verified_direct_count рахує тільки окремі праці з підтвердженим у первинному тексті/списку літератури напрямом кандидат → Da; це не кількість релевантних реплікацій. Метадані без прочитаного первинного тексту не включено.",
+  "qualifying_educational_checking_count": 0
+}

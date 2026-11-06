@@ -49,6 +49,8 @@ data/processed і явні артефакти; моделі повторно б�
 - robustness_baseline.py: звірка M4/M10 з P05; robustness_workflow.py: preflight/експорти/метадані.
 - robustness_reporting.py:3 агреговані фігури; P05-модулі та їхні hashes незмінні.
 - Базовий тест рівності H2 залишається у models.py, не повторюється як нове підтвердження.
+- conclusions.py: P07 — чистий синтез таблиць/реєстру; conclusions_workflow.py: hashes/експорти без fit.
+- K3_conclusions.json: post-export перевірка версії аудитованих висновків, без циклу preflight.
 - eda.py: реалізовано P04 — 8 описових таблиць, повні категорії та count-screen.
 - eda_workflow.py: preflight за хешами P03, CSV/висновки, running/ready/failed metadata.
 - reporting.py: реалізовано P04 — 5 графіків із агрегованих CSV у PNG/SVG.

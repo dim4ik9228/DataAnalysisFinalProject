@@ -1,0 +1,13 @@
+{
+  "source_url": "https://equatorscience.com/index.php/jabter/article/download/554/417",
+  "retrieved_on": "2026-11-06",
+  "http_status": 200,
+  "content_type": [
+    "application/pdf"
+  ],
+  "downloaded_bytes": 391839,
+  "download_sha256": "e5d0836b2f87cbb146037ef7136f5a2f9b1cf20e899842a52fa91bfc4dfff38b",
+  "retained_pdf": false,
+  "identity_evidence": "Вебчитання PDF: с.448 (PDF p1) заголовок The Influence of Artificial Intelligence Service Quality and Customers Trust on Customers Loyality Bank BRI Larompong Unit; DOI10.54408/jabter.v5i3.575. URL для554 повертає іншу працю.",
+  "verification_method": "SHA обчислено з HTTP байтів; ідентичність прочитано web PDF parser, не виведено з самого хешу."
+}

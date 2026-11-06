@@ -1,0 +1,20 @@
+{
+  "research_verdict": "PASS",
+  "course_submission_status": "open",
+  "recorded_on": "2026-11-06",
+  "audited_outputs": {
+    "outputs/tables/final_hypotheses.csv": "b029067d58165c22bd60284a758cd4c986dcbce81345e54efbf17659b4afb16b",
+    "outputs/tables/final_verdicts.csv": "4a2d449707d786e34ca586e1f0ab1b51265c62341028fcc148e6018b01396adc",
+    "outputs/tables/final_robustness.csv": "4a23c565c277e04075b84da03f47031abbddd3e0d574af37beff5fcd1ff8220f",
+    "outputs/tables/final_claims.csv": "78cd9efbe2e96d26d3a0f539f15b08b98549f42f66a26a9b10e010d44f816dbf",
+    "outputs/tables/final_claim_evidence.csv": "aa4e8d5e98231405daf2dfbc182068f551a9d30d8bdc51a85708b3214d4c69c7",
+    "docs/final_conclusions.md": "275fe69a35d70d5249c5090576ce9178306835720b66556cf62f0641fe6dccd3"
+  },
+  "review_path": "docs/reviews/P07_conclusions_review.md",
+  "review_sha256": "8ca30dc43b8d59a01aae5282bc70d0514e7e8a96dc52f6129b7511ca28ef3254",
+  "remaining_requirements": [
+    "bibliography_3_to_5_citing_checking_unresolved",
+    "P08_report_and_presentation",
+    "P09_complete_reproduction_and_submission_package"
+  ]
+}

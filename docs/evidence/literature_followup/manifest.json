@@ -1,0 +1,86 @@
+{
+  "searched_on": "2026-11-06",
+  "algorithm": "sha256",
+  "files": [
+    {
+      "path": "docs/evidence/literature_followup/openalex_original.json",
+      "source_url": "https://api.openalex.org/works/https://doi.org/10.1038/s41598-025-89394-2",
+      "retrieved_on": "2026-11-06",
+      "http_status": 200,
+      "kind": "official_index_metadata",
+      "sha256": "d65c46e30993176b2cdccc3819168b7ae6a74407707d0e5c3c6b0d81d9b22f6a",
+      "bytes": 17706
+    },
+    {
+      "path": "docs/evidence/literature_followup/openalex_citing.json",
+      "source_url": "https://api.openalex.org/works?filter=cites%3AW4409150759&per_page=25",
+      "retrieved_on": "2026-11-06",
+      "http_status": 200,
+      "kind": "official_index_metadata",
+      "sha256": "172dc005fac0432325c80f7437d36b30d088ab741e84f01989d73b8aced86b61",
+      "bytes": 56419
+    },
+    {
+      "path": "docs/evidence/literature_followup/europepmc_citations.json",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/MED/40180962/citations?format=json",
+      "retrieved_on": "2026-11-06",
+      "http_status": 200,
+      "kind": "official_index_metadata",
+      "sha256": "f6733939ba4f559657f7cb41a6b397d2080b330ab6519c67c6a344236d4aeb71",
+      "bytes": 129
+    },
+    {
+      "path": "docs/evidence/literature_followup/crossref_original.json",
+      "source_url": "https://api.crossref.org/works/10.1038/s41598-025-89394-2",
+      "retrieved_on": "2026-11-06",
+      "http_status": 200,
+      "kind": "official_index_metadata",
+      "sha256": "9a73c441d23c9b30ddec838dfd22efde1ea867e7d14d7b9a90f8607e7fa76593",
+      "bytes": 20293
+    },
+    {
+      "path": "docs/evidence/literature_followup/crossref_acm.json",
+      "source_url": "https://api.crossref.org/works/10.1145/3845354.3845392",
+      "retrieved_on": "2026-11-06",
+      "http_status": 200,
+      "kind": "official_index_metadata",
+      "sha256": "b84dd1c80c3f897ff29034303f2b464ecf23e330256de92546318462b42924ca",
+      "bytes": 4455
+    },
+    {
+      "path": "docs/evidence/literature_followup/publisher_575.json",
+      "source_url": "https://equatorscience.com/index.php/jabter/article/view/575",
+      "retrieved_on": "2026-11-06",
+      "http_status": 200,
+      "kind": "primary_publisher_selected_evidence",
+      "sha256": "b40eb1d47a0e01d252c0487f11bd0847ec8a564220f24a55fa898c82876a903b",
+      "bytes": 1192
+    },
+    {
+      "path": "docs/evidence/literature_followup/publisher_554.json",
+      "source_url": "https://equatorscience.com/index.php/jabter/article/view/554",
+      "retrieved_on": "2026-11-06",
+      "http_status": 200,
+      "kind": "primary_publisher_selected_evidence",
+      "sha256": "df021c318f5f61c7514c749fef280af6c33fbad71d397554a15d3eb50ab49d89",
+      "bytes": 1053
+    },
+    {
+      "path": "docs/evidence/literature_followup/search_log.md",
+      "source_url": "multiple: see queries and URLs in file",
+      "retrieved_on": "2026-11-06",
+      "kind": "search_and_access_reading_notes",
+      "sha256": "3809510c0952ac89c8f19e24cfa9fc1c8e802bb234a0a69d3c8df88e38637dd0",
+      "bytes": 2931
+    },
+    {
+      "path": "docs/evidence/literature_followup/pdf_identity_note.json",
+      "source_url": "https://equatorscience.com/index.php/jabter/article/download/554/417",
+      "retrieved_on": "2026-11-06",
+      "http_status": 200,
+      "kind": "download_hash_and_web_pdf_reading_note",
+      "sha256": "3eaaa7c14041016125403e1db221bab46b0496b4cd6e5ab9320da3a027b7ad88",
+      "bytes": 820
+    }
+  ]
+}

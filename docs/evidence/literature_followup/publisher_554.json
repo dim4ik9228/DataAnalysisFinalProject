@@ -1,0 +1,12 @@
+{
+  "source_url": "https://equatorscience.com/index.php/jabter/article/view/554",
+  "retrieved_on": "2026-11-06",
+  "http_status": 200,
+  "fetched_html_utf8_sha256": "33885fb45601ee383b80b8f4a15d28990a63ea732f3ba000a4b29888390a4d14",
+  "snapshot_kind": "selected_reference_evidence_and_reading_notes_not_full_html",
+  "reference_entries_count": 24,
+  "da_reference_matches": [],
+  "abstract_reading_note": "Якісний кейс супроводу малого підприємства оренди звукового обладнання; не освіта батьків. У переліку посилань HTML немає DOI/назви Da.",
+  "abstract_opening": "Abstract Micro, Small, and Medium Enterprises (MSMEs) play a vital role in the Indonesian economy; however, many continue to face",
+  "limitations": "Збережено вибрані докази та нотатки, а не повний HTML. Хеш fetched_html описує отриману сторінку; маніфест окремо хешує цей JSON."
+}
