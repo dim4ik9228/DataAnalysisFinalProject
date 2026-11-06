@@ -42,8 +42,10 @@ data/processed і явні артефакти; моделі повторно б�
 - data.py: реалізовано P03 — pinned acquisition, кеш, маніфест, читання CSV та перевірки схеми.
 - preparation.py: реалізовано P03 — єдиний фільтр, повний/реплікаційний шари, N та перевірений експорт.
 - data_workflow.py: оркестрація notebook01, паспорт/словник, метадані, failed/prepared marker.
-- models.py: формули моделей, OLS, витяг коефіцієнтів і діагностика.
-- robustness.py: специфікації стійкості, перестановки, тест рівності коефіцієнтів.
+- models.py: реалізовано P05 — явні X/y, OLS/HC3/HC1/nonrobust, H1/H2 і діагностика.
+- replication.py: еталони/Decimal-порівняння й окремі вердикти; replication_workflow.py: preflight/метадані.
+- replication_reporting.py: 4 діагностичні фігури; EDA reporting.py незмінний.
+- robustness.py: майбутні специфікації стійкості та noise-плацебо P06; базовий тест рівності вже у models.py.
 - eda.py: реалізовано P04 — 8 описових таблиць, повні категорії та count-screen.
 - eda_workflow.py: preflight за хешами P03, CSV/висновки, running/ready/failed metadata.
 - reporting.py: реалізовано P04 — 5 графіків із агрегованих CSV у PNG/SVG.
