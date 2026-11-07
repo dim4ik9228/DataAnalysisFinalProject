@@ -14,3 +14,7 @@ reports/assets/*.svg -text whitespace=-blank-at-eol
 reports/assets/*.json -text
 outputs/tables/report_values.csv text eol=lf
 reports/content_map.csv text eol=lf
+
+# Audit seals bind literal review bytes, including line endings.
+docs/reviews/P07_conclusions_review.md -text
+docs/reviews/P09_reproducibility_review.md -text
