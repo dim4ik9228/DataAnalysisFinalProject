@@ -25,6 +25,7 @@
 
 ```powershell
 uv sync --locked
+.venv/Scripts/python.exe tools/reporting/setup.py
 uv run --locked python scripts/build_reports.py
 ```
 
@@ -39,13 +40,24 @@ SHA-256 перевіряється; кеш у build/toolchain/ (не Git). PDF �
 щоб основний показ не потребував мережі. Графіки Plotly мають статичні SVG-пари;
 Plotly JS збережений локально з ліцензійним заголовком.
 
-Браузерний експорт використовує встановлений Chrome (`REPORT_BROWSER` може
-вказати інший Chromium executable) та Playwright/Node/Python із bundled Codex
-runtime у ~/.cache/codex-runtimes/codex-primary-runtime/dependencies. Python
-цього runtime містить pypdf для перевірки PDF; це окремо від незміненого uv.lock.
-Поза цим комп'ютером треба забезпечити цей renderer runtime або адаптувати його
-пошук у build_reports.py; універсальну чисту інсталяцію перевірятиме P09.
-Фактичні версії записані в toolchain_manifest.json.
+Windows x64 без Codex: потрібні Git, uv і встановлений Chrome або Edge.
+`tools/reporting/setup.py` створює окрему `.venv` із Python 3.12.10 та
+pypdf 6.21.4 через власний `uv.lock`, завантажує офіційний portable Node
+22.15.0 у `build/toolchain/node/` з перевіркою SHA-256 і виконує `npm ci`
+за `tools/reporting/package-lock.json` (Playwright 1.62.1). Аналітичний
+`uv.lock` не змінюється. Перший setup потребує мережі; повторний build працює
+з локальними залежностями. Binaries, `.venv` і node_modules не входять у Git.
+
+Builder шукає встановлений Chrome/Edge або приймає `$env:REPORT_BROWSER`
+із повним шляхом до Chromium executable. Версія браузера записується після
+реального запуску; вона не pinned, тому побайтову тотожність PDF між різними
+версіями браузера не гарантуємо. Додаткові явні overrides: `REPORT_PYTHON`,
+`REPORT_NODE`, `REPORT_NODE_MODULES`. Вони мають відповідати pinned версіям;
+`REPORT_NODE` під час setup має вказувати на повний Node distribution із npm.
+Стандартні шляхи — `tools/reporting/.venv/Scripts/python.exe`,
+`tools/reporting/node_modules` і portable Node у `build/toolchain/node/`.
+Перевірка версій, шрифту й чинності P07 передує рендерингу. Фактичні версії,
+шляхи renderer, hashes lock-файлів і шрифту записуються в toolchain_manifest.json.
 
 Локальні metadata: outputs/logs/reports_run.json; QA: build/p08/browser_validation.json,
 pdf_validation.json, qa/ із PNG усіх сторінок/слайдів. Вони ігноруються в Git.

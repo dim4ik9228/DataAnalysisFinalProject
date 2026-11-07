@@ -1,0 +1,5 @@
+[project]
+name = "parentedu-report-renderer"
+version = "0.1.0"
+requires-python = "==3.12.*"
+dependencies = ["pypdf==6.21.4"]

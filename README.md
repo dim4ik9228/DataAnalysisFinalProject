@@ -250,3 +250,18 @@ uv run --locked python scripts/validate_protocol.py
 - Інструкція курсу: https://kleban.notion.site/research-how-to
 
 Аналіз стосується асоціацій. Він не встановлює причинний вплив освіти батьків.
+
+## Повне відтворення P09
+
+```powershell
+uv sync --locked
+.venv/Scripts/python.exe tools/reporting/setup.py
+uv run --locked python scripts/run_project.py
+uv run --locked python scripts/package_submission.py
+```
+
+Runner виконує00–05 з окремими ядрами, reports і всі перевірки.
+[Повна інструкція](docs/reproducibility.md), [checklist здачі](docs/submission_checklist.md).
+Windows x64 без Codex; Git/uv/Chrome або Edge. Деталі renderer — reports/README.md.
+Чистий незалежний запуск і фінальний комплект перевіряються уP09; готовність до
+здачі оцінюється окремо від технічної відтворюваності.

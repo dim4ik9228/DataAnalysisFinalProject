@@ -91,6 +91,71 @@ def setup_quarto(root):
     return executable
 
 
+def renderer_paths(root):
+    """Validate separate renderer paths without depending on a Codex installation."""
+    tool = root / "tools/reporting"
+    defaults = {
+        "python": tool / ".venv/Scripts/python.exe",
+        "node": root / "build/toolchain/node/node-v22.15.0-win-x64/node.exe",
+        "modules": tool / "node_modules",
+    }
+    paths = {
+        key: Path(
+            os.environ.get(
+                "REPORT_NODE_MODULES" if key == "modules" else "REPORT_" + key.upper(), value
+            )
+        )
+        for key, value in defaults.items()
+    }
+    explicit = os.environ.get("REPORT_BROWSER")
+    candidates = (
+        [Path(explicit)]
+        if explicit
+        else [
+            Path(os.environ.get(base, "C:/Program Files")) / suffix
+            for base, suffix in (
+                ("PROGRAMFILES", "Google/Chrome/Application/chrome.exe"),
+                ("PROGRAMFILES", "Microsoft/Edge/Application/msedge.exe"),
+                ("PROGRAMFILES(X86)", "Microsoft/Edge/Application/msedge.exe"),
+                ("LOCALAPPDATA", "Google/Chrome/Application/chrome.exe"),
+            )
+        ]
+    )
+    paths["browser"] = next((p for p in candidates if p.is_file()), candidates[0])
+    for key, path in paths.items():
+        require(
+            path.exists(),
+            f"Renderer {key} missing: {path}. Run python tools/reporting/setup.py; set REPORT_BROWSER for installed Chrome/Edge.",
+        )
+        paths[key] = path.resolve()
+    versions = {
+        "node_version": subprocess.check_output(
+            [str(paths["node"]), "--version"], text=True
+        ).strip(),
+        "playwright_version": json.loads(
+            (paths["modules"] / "playwright/package.json").read_text(encoding="utf-8")
+        )["version"],
+        "document_packages": subprocess.check_output(
+            [str(paths["python"]), "-c", "import pypdf; print('pypdf ' + pypdf.__version__)"],
+            text=True,
+        ).strip(),
+        "renderer_python_version": subprocess.check_output(
+            [str(paths["python"]), "--version"], text=True
+        ).strip(),
+    }
+    for name, expected in {
+        "node_version": "v22.15.0",
+        "playwright_version": "1.62.1",
+        "document_packages": "pypdf 6.21.4",
+        "renderer_python_version": "Python 3.12.10",
+    }.items():
+        require(
+            versions[name] == expected,
+            f"Renderer {name} requires {expected}; got {versions[name]}.",
+        )
+    return paths, versions
+
+
 def md_table(frame):
     def cell(v):
         if pd.isna(v):
@@ -393,11 +458,14 @@ def build(root=ROOT, render=True):
             }
         )
         if render:
+            renderer, renderer_versions = renderer_paths(root)
             quarto = setup_quarto(root)
             env = os.environ.copy()
             import matplotlib
 
-            env["TYPST_FONT_PATHS"] = str(Path(matplotlib.get_data_path()) / "fonts/ttf")
+            font_path = Path(matplotlib.get_data_path()) / "fonts/ttf"
+            require((font_path / "DejaVuSerif.ttf").is_file(), "Missing pinned DejaVu Serif font.")
+            env["TYPST_FONT_PATHS"] = str(font_path)
             for file, fmt in (
                 ("report.qmd", "html"),
                 ("report.qmd", "typst"),
@@ -419,14 +487,7 @@ def build(root=ROOT, render=True):
                     check=True,
                     timeout=180,
                 )
-            runtime = Path.home() / ".cache/codex-runtimes/codex-primary-runtime/dependencies"
-            node = runtime / "node/bin/node.exe"
-            modules = runtime / "node/node_modules"
-            browser = Path(
-                os.environ.get(
-                    "REPORT_BROWSER", r"C:/Program Files/Google/Chrome/Application/chrome.exe"
-                )
-            )
+            node, modules, browser = (renderer[key] for key in ("node", "modules", "browser"))
             subprocess.run(
                 [
                     str(node),
@@ -444,7 +505,7 @@ def build(root=ROOT, render=True):
             )
             subprocess.run(
                 [
-                    str(runtime / "python/python.exe"),
+                    str(renderer["python"]),
                     str(root / "scripts/validate_report_pdfs.py"),
                     "--root",
                     str(root),
@@ -462,32 +523,30 @@ def build(root=ROOT, render=True):
                     "quarto_version": VERSION,
                     "source_url": URL,
                     "archive_sha256": ARCHIVE_SHA256,
-                    "browser": "Chromium via installed Chrome",
+                    "browser": "installed Chromium browser (Chrome/Edge or REPORT_BROWSER)",
+                    "font_sha256": digest(font_path / "DejaVuSerif.ttf"),
                     "browser_version": browser_checks["browser_version"],
                     "pdf_metadata_date": "2026-11-06 (project date, normalized)",
                     "pdf_engine": "Quarto Typst",
                     "typst_version": subprocess.check_output(
                         [str(quarto.parent / "tools/x86_64/typst.exe"), "--version"], text=True
                     ).strip(),
-                    "node_version": subprocess.check_output(
-                        [str(node), "--version"], text=True
-                    ).strip(),
-                    "playwright_version": subprocess.check_output(
-                        [str(node), "-p", "require('playwright/package.json').version"],
-                        cwd=modules,
-                        text=True,
-                    ).strip(),
-                    "document_packages": subprocess.check_output(
-                        [
-                            str(runtime / "python/python.exe"),
-                            "-c",
-                            "import pypdf; print('pypdf ' + pypdf.__version__)",
-                        ],
-                        text=True,
-                    ).strip(),
+                    **renderer_versions,
+                    "renderer_paths": {key: str(value) for key, value in renderer.items()},
+                    "renderer_lock_hashes": {
+                        name: digest(root / "tools/reporting" / name)
+                        for name in (
+                            "uv.lock",
+                            "package-lock.json",
+                            "pyproject.toml",
+                            "package.json",
+                            ".python-version",
+                            "setup.py",
+                        )
+                    },
                     "math": "native MathML offline",
-                    "browser_automation": "bundled Playwright",
-                    "python_packages": "unchanged uv.lock",
+                    "browser_automation": "separate pinned Playwright environment",
+                    "python_packages": "analysis uv.lock unchanged; tools/reporting/uv.lock separate",
                 },
             )
         outputs = [
