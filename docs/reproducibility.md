@@ -35,8 +35,8 @@ K3-файли вимагають побайтового збігу. Істори
 
 `--analysis-only` означає лише перерахунок аналізу, status analysis_ready;
 це не повний technicalPASS і не право пакувати. Основний перевірений CLI —
-повний запуск. `--timeout` задає ліміт subprocess-кроку, типовий600с;
-ядро має cell timeout180с. Частковий запуск не є resume повного.
+повний запуск. `--timeout` задає ліміт subprocess-кроку, типовий600 с;
+ядро має cell timeout180 с. Частковий запуск не є resume повного.
 
 ## Перевірка чистої копії
 
@@ -59,6 +59,10 @@ notebook і наукові результати не змінюються. Manif
 Git може бути відсутнім у розпакованому комплекті: для повторного запуску
 спершу `git init`, `git add .`, `git commit` (локально), потім команди вище.
 Оригінальний project commit і review-кандидат фіксуються manifest/receipt.
+Архівний full_run.json має ті самі поля з нормалізацією UTF-8/LF; public evidence
+містить canonical_full_run_sha256 для цього подання окремо від hash локального
+receipt. Це зміна формату JSON, не даних. Контрольну суму ZIP можна звірити
+через Get-FileHash -Algorithm SHA256 та зовнішній файл .zip.sha256.
 
 Пакет є review candidate, поки course_submission_status=open. Бібліографічні
 вимоги та реальна репетиція — у submission_checklist.md. Публікація/надсилання

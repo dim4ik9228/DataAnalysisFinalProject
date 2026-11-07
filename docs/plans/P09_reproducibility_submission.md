@@ -1,6 +1,6 @@
 # P09. Повний запуск і комплект здачі — детальний план
 
-Дата: 2026-11-07. Статус: **у роботі**.
+Дата: 2026-11-07. Статус: **завершено технічно; course_submission_status=open**.
 Обсяг: M для runner/перевірок/комплекту; окреме renderer-середовище може збільшити
 фазу до L. Передумова: P08 завершено комітом `c7c1756`, K3 research PASS.
 Основа: [roadmap](../roadmap.md), [передача P08](../P08_handoff.md),
@@ -165,7 +165,7 @@ Reviewer працює у власній копії; координатор не 
    обіцяти лише там, де її фактично отримано з pinned renderer. Нова нормалізація
    допустима тільки для службових полів, не даних або помилок обчислення.
 5. Перевірити локальні посилання, відкриття HTML без мережі, PDF і окремі notes.
-   Реальна репетиція10–15хв залишається дією автора: запропонувати сценарій і
+   Реальна репетиція10–15 хв залишається дією автора: запропонувати сценарій і
    записати фактичний час лише зі слів користувача/фактичного проведення.
    Невиконану репетицію залишити явним пунктом, не імітувати таймером агента.
 
@@ -265,24 +265,43 @@ research_reviewer незалежно виконує й аудіює. Незал�
 
 ## 6. Checklist завершення
 
-- [ ] Baseline/candidate і K3 seal/review hashes зафіксовано.
-- [ ] Runner реально виконує00–05 з окремих ядер і не лишає stale ready.
-- [ ] Чистий clone/.venv/raw acquisition відтворено незалежно, cache-mode позначено.
-- [ ] Renderer відтворюється без Codex; повні HTML/PDF/notes перевірені.
-- [ ] Числові контракти й K3 hashes пройшли; source notebook не виконані у Git.
-- [ ] Тести runner/failure/package, Ruff/protocol/lock і повний integration пройдені.
-- [ ] Checklist містить open літературу/репетицію, якщо їх не закрито доказами.
-- [ ] Комплект розпаковано й перевірено; hash ZIP зовнішній, секретів/кешів немає.
-- [ ] Незалежний review та K4 технічний/course статуси правдиві й прив'язані до версії.
-- [ ] Фінальний коміт/post-commit verification і комплект узгоджені.
+- [x] Baseline/candidate і K3 seal/review hashes зафіксовано.
+- [x] Runner реально виконує00–05 з окремих ядер і не лишає stale ready.
+- [x] Чистий clone/.venv/raw acquisition відтворено незалежно, cache-mode позначено.
+- [x] Renderer відтворюється без Codex; повні HTML/PDF/notes перевірені.
+- [x] Числові контракти й K3 hashes пройшли; source notebook не виконані у Git.
+- [x] Тести runner/failure/package, Ruff/protocol/lock і повний integration пройдені.
+- [x] Checklist містить open літературу/репетицію, якщо їх не закрито доказами.
+- [x] Комплект розпаковано й перевірено; hash ZIP зовнішній, секретів/кешів немає.
+- [x] Незалежний review та K4 технічний/course статуси правдиві й прив'язані до версії.
+- [x] Фінальний коміт/post-commit verification і комплект узгоджені.
 
-## 7. Підсумок планування
+## 7. Підсумок реалізації
 
-Створено лише детальний план P09. Runner, renderer bootstrap, clean-run,
-комплект і K4 ще не реалізовано. P03–P08, K3, протокол/config/uv.lock незмінні.
-Реалізація починається після погодження цього плану користувачем.
+Реалізовано runner/execute_notebook, fresh markers і inventory checks, окремий
+renderer bootstrap/locks, baseline/comparison, allowlisted package/manifest/checksum
+та перевірку після розпакування. Перевірений candidate коду:9e31b46.
+Поточний повний запуск і незалежний clone:267 тестів;46/46 виходів побайтово
+збігаються з P08baseline; незалежний raw UCI downloadcache_hit=false.
+Аналітичні source notebooks/P03–P07, протокол/config/uv.lock і6K3outputs не змінено.
 
-Незалежний огляд плану research_reviewer (gpt-6.1-sol / low): PASS. Враховано
-зауваження щодо fresh phase markers, розділення baseline/clean-run preflight
-і повторної перевірки фінального ZIP після audited candidate. Огляд стосується
-плану; успішний clean-run чи K4 на цьому етапі не заявлено.
+Знайдено й виправлено реальний storage-дефект: системний Git autocrlf змінював
+mixed newline P07review при clone. .gitattributes -text і повторне внесення точних
+аудованих робочих байтів до Git зберігає чинний seal8ca30dc4…; текст review,
+сам seal і наукові висновки не змінено. Додано регресійний тест GitblobSHA,
+правила Git включено до комплекту. Виправлено також analysis-only без report_values,
+повноту baseline і виявлення нових виконуваних файлів після ready run.
+
+Незалежно перевірено окремі analysis/renderer environments, нове UCIотримання,
+повний ланцюг, payload/allowlist/checksum/unpack і Gitinit із розпакованого ZIP.
+HTML offline:16slides/16notes/5Plotly,0HTTP(S)запитів;12reportpages+16PDFslides
+оглянуто. Локальний clone на тому самомуWindowshost не називаємо іншою машиною.
+Rendererпакети зафіксовані; встановлений Chrome156.0.8078.80 записаний, не pinned.
+
+[K4](../K4_readiness.md), [публічні докази](../evidence/p09_validation.json),
+[аудит](../reviews/P09_reproducibility_review.md), [інструкція](../reproducibility.md).
+Технічна частинаP09 — PASS, course_submission_status=open:3–5citing/checking,
+реальна репетиція й фактичний канал/строк подання потребують дій/даних автора.
+Нових літературних пошуків/моделей не виконували. Нічого не опубліковано/не подано.
+Фінальна версія документації зв'язується з перевіреним candidate через незмінні
+source/config hashes; остаточний ZIP перевіряється повторно, SHA зберігається зовні.

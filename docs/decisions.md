@@ -222,3 +222,20 @@
 - Офлайн-popup speaker-view не заявляємо перевіреним; окремий Markdown — резерв.
   P08 завершена як комплект матеріалів; P09/K4 і бібліографічна вимога3–5
   citing/checking відкриті. Готовність до здачі open, нічого не опубліковано.
+
+## 2026-11-07 — P09, повне відтворення та комплект
+
+- Runner00–05 з окремими ядрами, свіжими phase markers і source inventory;
+  готовийfullreceipt потрібний для пакування. Analysis-only відокремлений.
+- Незалежний clone9e31b46, свіжі середовища/новийUCIdownload:267тестів,46/46
+  виходів побайтово рівні. SourceP03–P07/протокол/config/analysislock не змінено.
+- Окремий renderer без Codex, pinned Node/Playwright/Python/pypdf/Quarto;
+  встановленийChrome записаний, не pinned. Усі28PDFсторінок оглянуто, HTMLoffline.
+- Виявлено Gitautocrlf дефект sealedreview: Gitblob не містив точних mixednewline
+  аудованих байтів. -text і renormalize зберегли робочі байти8ca30dc4… уGit;
+  reviewтекст/K3seal не змінено, reseal не робили. Регресійний тест і attrs уZIP.
+- Allowlist package без raw/processed/toolbinaries/секретів;6executednotebooks
+  мають явно записану санітизаціюmetadata/hostpaths і видалену службовуguardcell.
+  Manifestбезselfhash, ZIPchecksumзовнішній, unpack/локальнийGitbootstrapперевірено.
+- ТехнічнаK4PASS окрема від courseopen:бібліографічнийпункт і реальна репетиція
+  залишаються; каналу/строку подання не вигадували. Фактичного подання немає.

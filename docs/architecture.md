@@ -110,3 +110,17 @@ Plotly-фрагменти, SVG та JSON. scripts/build_reports.py переві�
 не викликає fit або аналітичні ноутбуки. Source/config у reports/, проміжні QMD
 і toolchain у build/, чотири готові виходи в reports/rendered/. Деталі —
 [reports/README](../reports/README.md). Повний runner залишається P09.
+
+## Повне відтворення й пакування P09
+
+reproducibility.py + scripts/run_project.py керують00–05 з окремими ядрами,
+звітами й перевірками. execute_notebook.py дозволяє лише локальний .venv kernel.
+Кожний phase marker зв'язаний часовими межами й hash з поточним run_id;
+пакувальник submission.py приймає тільки чинний full ready receipt із source
+inventory/K3/outputs. Частковий analysis_ready не є дозволом формувати комплект.
+
+Renderer має власні tools/reporting locks/bootstrap; Codexruntime не потрібний.
+Джерела й метадані автора незмінні; browser version записана, але не pinned.
+Пакет має allowlist, sanitized executednotebooks, manifest без самохешування,
+зовнішній ZIPchecksum і unpack verification. Статуси технічноїK4 та відповідності
+курсу різні; деталі в docs/reproducibility.md та docs/K4_readiness.md.
