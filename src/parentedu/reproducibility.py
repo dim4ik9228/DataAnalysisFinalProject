@@ -72,7 +72,9 @@ def source_hashes(root):
         ("tests", ".py"),
     ):
         paths.extend((root / directory).rglob("*" + suffix))
-    paths.extend(root / n for n in ("pyproject.toml", "uv.lock", ".python-version"))
+    paths.extend(
+        root / n for n in ("pyproject.toml", "uv.lock", ".python-version", ".gitattributes")
+    )
     for name in (
         "report.qmd",
         "slides.qmd",

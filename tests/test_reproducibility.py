@@ -3,6 +3,7 @@
 import json
 import subprocess
 from datetime import UTC, datetime, timedelta
+from pathlib import Path
 
 import pytest
 
@@ -155,3 +156,14 @@ def test_analysis_comparison_does_not_require_report_exports(tmp_path):
     assert r.compare_baseline(root, baseline, analysis_only=True) == []
     with pytest.raises(ValueError, match="Missing regenerated"):
         r.compare_baseline(root, baseline)
+
+
+def test_committed_review_bytes_match_existing_seal():
+    import hashlib
+
+    root = Path(__file__).resolve().parents[1]
+    seal = json.loads((root / "docs/K3_conclusions.json").read_text(encoding="utf-8"))
+    content = subprocess.check_output(
+        ["git", "show", "HEAD:docs/reviews/P07_conclusions_review.md"], cwd=root
+    )
+    assert hashlib.sha256(content).hexdigest() == seal["review_sha256"]

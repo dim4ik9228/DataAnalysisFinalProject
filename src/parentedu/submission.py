@@ -13,7 +13,15 @@ from tempfile import TemporaryDirectory
 from parentedu.paths import ROOT
 
 MANIFEST = "package_manifest.json"
-ROOT_FILES = {"README.md", "AGENTS.md", "pyproject.toml", "uv.lock", ".python-version"}
+ROOT_FILES = {
+    "README.md",
+    "AGENTS.md",
+    "pyproject.toml",
+    "uv.lock",
+    ".python-version",
+    ".gitattributes",
+    ".gitignore",
+}
 SOURCE_SUFFIXES = {
     ".py",
     ".mjs",
