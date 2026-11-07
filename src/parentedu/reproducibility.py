@@ -131,7 +131,7 @@ def capture_baseline(root, destination):
     return manifest
 
 
-def compare_baseline(root, baseline):
+def compare_baseline(root, baseline, analysis_only=False):
     import numpy as np
     import pandas as pd
 
@@ -141,6 +141,8 @@ def compare_baseline(root, baseline):
     verify_hashes(root, manifest["frozen"])
     records = []
     for name, original_hash in manifest["files"].items():
+        if analysis_only and name == "outputs/tables/report_values.csv":
+            continue
         actual = local_path(root, name)
         require(actual.is_file(), f"Missing regenerated output: {name}")
         exact = digest(actual) == original_hash
@@ -313,6 +315,14 @@ def run_project(root=ROOT, baseline=None, analysis_only=False, timeout=600):
     try:
         from parentedu.environment import check_environment
 
+        for directory in (
+            "data/raw",
+            "data/processed",
+            "outputs/executed",
+            "outputs/tables",
+            "outputs/figures",
+        ):
+            local_path(root, directory).mkdir(parents=True, exist_ok=True)
         check_environment()
         record["git_commit"] = subprocess.check_output(
             ["git", "rev-parse", "HEAD"], cwd=root, text=True
@@ -330,6 +340,19 @@ def run_project(root=ROOT, baseline=None, analysis_only=False, timeout=600):
         if not (baseline / "baseline.json").exists():
             capture_baseline(root, baseline)
         record["baseline_manifest_sha256"] = digest(baseline / "baseline.json")
+        baseline_record = json.loads((baseline / "baseline.json").read_text(encoding="utf-8"))
+        required_baseline = set(
+            subprocess.check_output(
+                ["git", "ls-files", "outputs/tables/*.csv"], cwd=root, text=True
+            ).splitlines()
+        )
+        if analysis_only:
+            required_baseline.discard("outputs/tables/report_values.csv")
+        require(
+            required_baseline <= set(baseline_record["files"])
+            and "docs/final_conclusions.md" in baseline_record["files"],
+            "Incomplete reproduction baseline",
+        )
         env = os.environ.copy()
         env["JUPYTER_PATH"] = str(root / ".venv/share/jupyter")
         env["PYTHONUTF8"] = "1"
@@ -397,9 +420,15 @@ def run_project(root=ROOT, baseline=None, analysis_only=False, timeout=600):
             ("lock", ["uv", "lock", "--check"]),
             ("pytest", [sys.executable, "-m", "pytest", "-q"]),
         ):
+            if name == "pytest" and analysis_only:
+                cmd.extend(["-k", "not test_content_map_has_valid_claims_and_sources"])
             command_step(cmd, root, run_dir / f"{name}.log", timeout, env)
         record["tests_status"] = "PASS"
-        comparisons = compare_baseline(root, baseline)
+        require(
+            digest(baseline / "baseline.json") == record["baseline_manifest_sha256"],
+            "Baseline changed during execution",
+        )
+        comparisons = compare_baseline(root, baseline, analysis_only=analysis_only)
         comparison_path = run_dir / "comparison.json"
         write_json(
             comparison_path, {"status": "PASS", "atol": 1e-10, "rtol": 1e-10, "files": comparisons}

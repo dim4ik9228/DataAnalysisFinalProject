@@ -71,7 +71,9 @@ def test_pipeline_stops_and_replaces_ready(tmp_path, monkeypatch, exception):
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text("frozen")
     baseline = tmp_path / "baseline"
-    r.write_json(baseline / "baseline.json", {"files": {}, "frozen": {}})
+    r.write_json(
+        baseline / "baseline.json", {"files": {"docs/final_conclusions.md": "test"}, "frozen": {}}
+    )
     r.write_json(tmp_path / "outputs/logs/full_run.json", {"status": "ready"})
     calls = []
 
@@ -139,3 +141,17 @@ def test_new_executable_invalidates_ready_run(tmp_path, monkeypatch):
     }
     with pytest.raises(ValueError, match="source inventory"):
         r.validate_full_run(tmp_path, record)
+
+
+def test_analysis_comparison_does_not_require_report_exports(tmp_path):
+    root, baseline = tmp_path / "new", tmp_path / "baseline"
+    root.mkdir()
+    (baseline / "outputs/tables").mkdir(parents=True)
+    name = "outputs/tables/report_values.csv"
+    (baseline / name).write_text("value\n1\n")
+    r.write_json(
+        baseline / "baseline.json", {"files": {name: r.digest(baseline / name)}, "frozen": {}}
+    )
+    assert r.compare_baseline(root, baseline, analysis_only=True) == []
+    with pytest.raises(ValueError, match="Missing regenerated"):
+        r.compare_baseline(root, baseline)
