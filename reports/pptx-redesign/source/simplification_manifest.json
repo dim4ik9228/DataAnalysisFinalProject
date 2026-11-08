@@ -1,0 +1,18 @@
+{
+  "source_sha256": "ac0a8624a9d9a18ef28e0e0d2573bb6b16d3d87ebe17f2b9d3ca116ebeac687d",
+  "final_sha256": "fbce2e016fa2cd78211f2d57a9b611b5ed8bd5f03518cc6c3287cdd10f01d334",
+  "changed_slide": 8,
+  "changed_notes_slide": 8,
+  "all_other_slide_and_notes_parts_byte_identical": true,
+  "all_existing_excel_workbooks_byte_identical": true,
+  "other13_rendered_slides_pixel_identical": true,
+  "numerical_cache_refresh": "Only cached decimal spellings matched to unchanged original workbook cells; differences below1e-14. No cell changes.",
+  "note_words": 155,
+  "independent_review": "PASS for wording, numbers and preview; coordinator verified package preservation",
+  "hidden_backup_slides": [
+    12,
+    13,
+    14
+  ],
+  "scope_clarification": "R1/R2/R5 on slide8; backups12–14 unchanged"
+}

@@ -1,0 +1,45 @@
+{
+  "source_pptx_sha256": "cade4c7ea0a04d0caa937a4fb3790dd01176f6fb625fd8c00dcbc4a81ba6e04b",
+  "notes_pptx_sha256": "08236a9b6684eb8f54f6223b6701eb0d7971e592ab1b4634d6aa1e73de64d79d",
+  "script_sha256": "2c3ff625188971b4e211e62153b750303de1a4c84cdb5acdf1c9974154faa171",
+  "changed_package_parts": [
+    "ppt/notesSlides/notesSlide1.xml",
+    "ppt/notesSlides/notesSlide2.xml",
+    "ppt/notesSlides/notesSlide3.xml",
+    "ppt/notesSlides/notesSlide4.xml",
+    "ppt/notesSlides/notesSlide5.xml",
+    "ppt/notesSlides/notesSlide6.xml",
+    "ppt/notesSlides/notesSlide7.xml",
+    "ppt/notesSlides/notesSlide8.xml",
+    "ppt/notesSlides/notesSlide9.xml",
+    "ppt/notesSlides/notesSlide10.xml",
+    "ppt/notesSlides/notesSlide11.xml",
+    "ppt/notesSlides/notesSlide12.xml",
+    "ppt/notesSlides/notesSlide13.xml",
+    "ppt/notesSlides/notesSlide14.xml"
+  ],
+  "all_slide_chart_workbook_media_parts_byte_identical": true,
+  "hidden_backup_slides": [
+    12,
+    13,
+    14
+  ],
+  "timing": {
+    "main_word_count": 1152,
+    "main_slides": 11,
+    "backup_slides": 3,
+    "reading_rate_words_per_minute": [
+      115,
+      125
+    ],
+    "pause_allowance_seconds": 60,
+    "estimated_main_minutes": [
+      10.2,
+      11.0
+    ],
+    "rehearsed": false,
+    "notes_style": "Complete first-person Ukrainian read-aloud text; no instructions inside speech"
+  },
+  "independent_content_review": "PASS after grammar correction on slide6; all14 speeches checked against data and protocol",
+  "verification_scope": "Artifact Tool import and package validation, exact XML text match; native PowerPoint application not opened"
+}

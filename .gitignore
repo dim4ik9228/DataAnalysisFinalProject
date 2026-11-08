@@ -21,3 +21,20 @@ dist/
 
 # Quarto copies of already embedded report figures
 reports/rendered/assets/
+
+# Local JavaScript dependencies and Quarto cache
+node_modules/
+.quarto/
+
+# Private presentation-export work directories
+.chart-data-*/
+.codex-finalizer/
+
+# Microsoft Office / LibreOffice document lock files
+~$*
+.~lock.*#
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+[Dd]esktop.ini

@@ -1,0 +1,27 @@
+{
+  "status": "design_review_draft",
+  "format": "PPTX",
+  "slide_count": 14,
+  "main_slide_count": 11,
+  "hidden_backup_slides": [
+    12,
+    13,
+    14
+  ],
+  "estimated_main_seconds": 650,
+  "timing_is_rehearsed": false,
+  "author_notes": "not created; notes parts text-empty",
+  "pptx_sha256": "cade4c7ea0a04d0caa937a4fb3790dd01176f6fb625fd8c00dcbc4a81ba6e04b",
+  "chart_data_precision": "12 significant digits for Excel compatibility; source JSON retains raw CSV precision",
+  "editable_native_charts": 6,
+  "embedded_excel_workbooks": 6,
+  "editable_tables": 1,
+  "visual_review": "All14 rendered slides inspected, including roundtrip final PPTX",
+  "photo": {
+    "author": "Jessica Fadel",
+    "source": "https://unsplash.com/photos/ANexOmTOzmY",
+    "license": "Unsplash License",
+    "use": "illustrative cover image; not dataset subjects"
+  },
+  "scientific_inputs_unchanged": true
+}
